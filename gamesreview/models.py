@@ -4,7 +4,7 @@ from gamesreview import db
 
 class Publisher(db.model):
     #schema for Publisher model
-    id = db.Column(db.Integer, primary_key=True)
+    publisher = db.Column(db.Integer, primary_key=True)
     publisher_name = db.Column(db.string(30), unique=True, nullable=False)
     blizzard_activision = db.Column(db.string(0), unique=True, nullable=False)
 
@@ -17,10 +17,11 @@ class Publisher(db.model):
 
 
 class Id(db.model):
-     #schema for id model
-     id = db.Column(db.Integer, primary_key=True)
-     id_number= db.Column(db.string(30), unique=True, nullable=False)
-     blizzard_activision = db.Column(db.string(0), unique=True, nullable=False)
+     #schema for  publisher model 
+     publisher = db.Column(db.Integer, primary_key=True)
+     publisher_game= db.Column(db.string(30), unique=True, nullable=False)
+
+    
 
 
 

@@ -1,0 +1,21 @@
+.nav-wrapper a{
+    color: black;
+    font-size: 30px;
+    font-family: 'Cookie', cursive;
+    font-family: 'Righteous', cursive;
+}
+@media screen and (max-width: 667px) {
+    .nav-wrapper a{
+        font-size: 15px;
+    }
+}
+#retro{
+    width: 100%;
+    height: 50%;
+}
+
+@media screen and (max-width: 667px) {
+    #retro{
+      
+    }
+}

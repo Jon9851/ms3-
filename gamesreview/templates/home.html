@@ -4,23 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cookie&family=Righteous&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
+
 
     <title>Home</title>
 </head>
 <header>
-    <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Logo</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="">Sass</a></li>
-            <li><a href="">Components</a></li>
-            <li><a href="">JavaScript</a></li>
-          </ul>
-        </div>
-      </nav>
+  <nav nav class="purple">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Games Review</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"></i></a>
+      <ul class="right hide-on-med-and-down" >
+        <li><a href="home.html">Home</a></li>
+        <li><a href="">Games</a></li>
+        <li><a href="collapsible.html">Log In</a></li>
+        <li><a href="mobile.html">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="home.html">home</a></li>
+    <li><a href="badges.html">Games</a></li>
+    <li><a href="collapsible.html">Log in</a></li>
+    <li><a href="mobile.html">Register</a></li>
+  </ul>
 </header>
 <body>
+  <img id="retro" src="{{url_for('static', filename='image/retro.png')}}" alt="">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
 </body>
 </html>

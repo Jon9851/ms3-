@@ -1,5 +1,5 @@
 import os
-from gamereview import app
+from gamesreview import app
 
 
 if __name__ == "__main__":
