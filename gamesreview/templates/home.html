@@ -33,7 +33,13 @@
   </ul>
 </header>
 <body>
-  <img id="retro" src="{{url_for('static', filename='image/retro.png')}}" alt="">
+  <div class="container">
+    <img src="{{url_for('static', filename='image/rdr2.png')}}" alt="" class="img img-1 show">
+    <img src="{{url_for('static', filename='image/codw.png')}}" alt="" class="img img-2">
+    <img src="{{url_for('static', filename='image/skyrim.png')}}" alt="" class="img img-3">
+    <img src="{{url_for('static', filename='image/kartos.png')}}" alt="" class="img img-4">
+
+  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{url_for('static', filename='js/script.js')}}"></script>
 </body>

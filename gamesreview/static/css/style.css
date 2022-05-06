@@ -1,3 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+      background-color: purple;
+  }
+
+  img {
+    position: absolute;
+    bottom: 12%;
+    margin-left: 5%;
+    height: 70%;
+    width: 60%;
+    align-items: center;
+    opacity: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.8s;
+  }
+  
+  .show {
+    opacity: 1;
+  }
+
 .nav-wrapper a{
     color: black;
     font-size: 30px;
