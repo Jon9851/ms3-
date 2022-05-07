@@ -5,7 +5,7 @@
   }
   
   body{
-      background-image :  url("https://i.postimg.cc/J0bz8c0W/retro.jpg");
+      background-image :  url("https://i.postimg.cc/BvX6zMYw/backxbp.png");
       
   }
 
@@ -17,22 +17,26 @@
     width: 100vh;
     align-items: center;
     opacity: 0;
-    border: 1px solid #ccc;
+    border: 1px solid;
     border-radius: 5px;
     transition: 1s;
   }
   
   .show {
-    opacity: 0.8;
+    opacity: 0.7;
   }
 #left{
     width: 100%;
 }
+.nav-wrapper{
+  background: transparent;
+}
 .nav-wrapper a{
-    color: black;
+    color: #01579b;
     font-size: 30px;
     font-family: 'Cookie', cursive;
     font-family: 'Righteous', cursive;
+   
 }
 @media screen and (max-width: 667px) {
     .nav-wrapper a{
