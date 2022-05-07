@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cookie&family=Righteous&display=swap">
+    <script src="https://kit.fontawesome.com/8f8d6e0652.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
 
@@ -12,25 +13,28 @@
     <title>Home</title>
 </head>
 <header>
-  <nav nav class="light-green accent-3">
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Games Review</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"></i></a>
-      <ul class="right hide-on-med-and-down" >
-        <li><a href="home.html">Home</a></li>
-        <li><a href="">Games</a></li>
-        <li><a href="collapsible.html">Log In</a></li>
+
+  <nav>
+    <div class="nav-wrapper light-green draken-3">
+      <a href="#!" class="brand-logo">Gmes Review</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-regular fa-bars"></i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="badges.html">Games</a></li>
+        <li><a href="collapsible.html">Login</a></li>
         <li><a href="mobile.html">Register</a></li>
       </ul>
-    </div>
+ 
   </nav>
 
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="home.html">home</a></li>
+  <ul class="sidenav light-green draken-3" id="mobile-demo">
+    <li><a href="{{ url_for('home') }}">Home</a></li>
     <li><a href="badges.html">Games</a></li>
-    <li><a href="collapsible.html">Log in</a></li>
+    <li><a href="collapsible.html">Login</a></li>
     <li><a href="mobile.html">Register</a></li>
   </ul>
+</div>
+
 </header>
 <body>
   <div class="container">
@@ -38,11 +42,9 @@
     <img src="{{url_for('static', filename='image/codw.png')}}" alt="" class="img img-2">
     <img src="{{url_for('static', filename='image/skyrim.png')}}" alt="" class="img img-3">
     <img src="{{url_for('static', filename='image/kartos.png')}}" alt="" class="img img-4">
+  </div>
 
 
-    <img id="left" src="{{url_for('static', filename='image/ml.png')}}" alt="">
-    <img src="{{url_for('static', filename='image/rdr2.png')}}" alt="">
-  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{url_for('static', filename='js/script.js')}}"></script>
 </body>
