@@ -6,7 +6,6 @@ class Publisher(db.model):
     #schema for Publisher model
     publisher = db.Column(db.Integer, primary_key=True)
     publisher_name = db.Column(db.string(30), unique=True, nullable=False)
-    blizzard_activision = db.Column(db.string(0), unique=True, nullable=False)
 
 
     def __repr__(self):
@@ -16,18 +15,17 @@ class Publisher(db.model):
 
 
 
-class Id(db.model):
+class Register(db.model):
      #schema for  publisher model 
-     publisher = db.Column(db.Integer, primary_key=True)
-     publisher_game= db.Column(db.string(30), unique=True, nullable=False)
+     id = db.Column(db.Integer, primary_key=True)
+     user_name= db.Column(db.string(30), unique=True, nullable=False)
+     
+
 
     
 
 
 
-class Login(db.model):
+class (db.model):
      #schema for login model
 
-
-class Admin(db.model):
-      #schema for admin model

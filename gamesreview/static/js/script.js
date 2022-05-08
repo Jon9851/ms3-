@@ -30,7 +30,7 @@ var repeat = function(activeClass){
         return;
     }
     repeater();
-        }, 3000);
+        }, 5000);
     }
     repeater();
 }

@@ -5,53 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cookie&family=Righteous&display=swap">
-    <script src="https://kit.fontawesome.com/8f8d6e0652.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
-
-
+   
     <title>Home</title>
 </head>
 <header>
-
+  {% block styles %}
+  {% endblock %}
   <nav>
     <div class="nav-wrapper green darken-2">
       <a href="#!" class="brand-logo">Games Review</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-game-console-handheld"></i>></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"></i>></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
         <li><a href="badges.html">Games</a></li>
-        <li><a href="collapsible.html">Login</a></li>
-        <li><a href="mobile.html">Register</a></li>
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+        <li><a href="{{ url_for('register') }}">Register</a></li>
       </ul>
  
   </nav>
 
   <ul class="sidenav green draken-3" id="mobile-demo">
-    <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('index') }}">Home</a></li>
     <li><a href="badges.html">Games</a></li>
     <li><a href="collapsible.html">Login</a></li>
-    <li><a href="mobile.html">Register</a></li>
+    <li><a href="{{ url_for('register') }}">Register</a></li>
   </ul>
 </div>
-
+{% block content %}
+    {% endblock %}
 </header>
+
 <body>
-  <div class="img-slider">
-    <div class="slide active">
-      <img src="{{url_for('static', filename='image/rdr2.png')}}" alt=""> alt="1">
-    </div>
-    <div class="slide">
-      <img src="{{url_for('static', filename='image/codw.png')}}" alt="2">
-    </div>
-    <div class="slide">
-      <img src="{{url_for('static', filename='image/skyrim.png')}}" alt="3">
-    </div>
-    <div class="slide">
-      <img src="{{url_for('static', filename='image/kartos.png')}}" alt="4">
-      </div>
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{url_for('static', filename='js/script.js')}}"></script>
 </body>
