@@ -15,9 +15,9 @@
 <header>
 
   <nav>
-    <div class="nav-wrapper light-green draken-3">
-      <a href="#!" class="brand-logo">Gmes Review</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-regular fa-bars"></i></a>
+    <div class="nav-wrapper green darken-2">
+      <a href="#!" class="brand-logo">Games Review</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-game-console-handheld"></i>></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="{{ url_for('home') }}">Home</a></li>
         <li><a href="badges.html">Games</a></li>
@@ -27,7 +27,7 @@
  
   </nav>
 
-  <ul class="sidenav light-green draken-3" id="mobile-demo">
+  <ul class="sidenav green draken-3" id="mobile-demo">
     <li><a href="{{ url_for('home') }}">Home</a></li>
     <li><a href="badges.html">Games</a></li>
     <li><a href="collapsible.html">Login</a></li>
@@ -37,12 +37,19 @@
 
 </header>
 <body>
-  <div class="container">
-    <img src="{{url_for('static', filename='image/rdr2.png')}}" alt="" class="img img-1 show">
-    <img src="{{url_for('static', filename='image/codw.png')}}" alt="" class="img img-2">
-    <img src="{{url_for('static', filename='image/skyrim.png')}}" alt="" class="img img-3">
-    <img src="{{url_for('static', filename='image/kartos.png')}}" alt="" class="img img-4">
-  </div>
+  <div class="img-slider">
+    <div class="slide active">
+      <img src="{{url_for('static', filename='image/rdr2.png')}}" alt=""> alt="1">
+    </div>
+    <div class="slide">
+      <img src="{{url_for('static', filename='image/codw.png')}}" alt="2">
+    </div>
+    <div class="slide">
+      <img src="{{url_for('static', filename='image/skyrim.png')}}" alt="3">
+    </div>
+    <div class="slide">
+      <img src="{{url_for('static', filename='image/kartos.png')}}" alt="4">
+      </div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

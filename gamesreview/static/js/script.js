@@ -4,20 +4,34 @@ document.addEventListener("DOMContentLoaded", function() {
     M.Sidenav.init(sidenav);
 });
 
-//  image slider
-let counter = 1
+//  image Slider
+var slides = document.querySelectorAll('.slide');
+var buttons = document.querySelectorAll('.btn');
+let currentSlide = 1;
 
+//Autoplay Image Slider with Navigation 
+var repeat = function(activeClass){
+    let active = document.getElementsByClassName('active');
+    let i = 1;
 
+    var repeater = () => {
+        setTimeout(function(){
+            [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+    });
 
-setInterval(()=>{
+    slides[i].classList.add('active');
+    i++;
 
-    document.querySelector('.img.show').classList.remove('show')
-    const img = document.querySelector(`.img-${counter}`)
-    img.classList.add('show')
-    counter++
-
-    if(counter >4){
-        counter = 1
+    if(slides.length == i){
+        i = 0;
     }
-
-},3000)
+    if(i >= slides.length){
+        return;
+    }
+    repeater();
+        }, 3000);
+    }
+    repeater();
+}
+repeat();
