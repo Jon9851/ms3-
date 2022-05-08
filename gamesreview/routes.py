@@ -1,5 +1,6 @@
-from flask import flash, render_template, request, redirect, session, url_for
+from flask import flask, render_template
 from gamesreview import app, db
+from gamesreview.models import Publisher, Title
 from werkzeug.security import generate_password_hash, check_password_hash
 
 
