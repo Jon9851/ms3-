@@ -2,11 +2,10 @@ from gamesreview import db
 
 
 
-class Publisher(db.model):
+class Publisher(db.Model):
     #schema for Publisher model
     id = db.Column(db.Integer, primary_key=True)
-    publisher = db.Column(db.Integer, primary_key=True)
-    publisher_name = db.Column(db.string(30), unique=True, nullable=False)
+    publisher_name = db.Column(db.String(30), unique=True, nullable=False)
     games = db.relationship("Title", backref="Publisher", cascade="all, delete", lazy=True)  
 
     def __repr__(self):
@@ -16,18 +15,18 @@ class Publisher(db.model):
 
 
 
-class Title(db.model):
+class Title(db.Model):
      #schema for  publisher model 
      id = db.Column(db.Integer, primary_key=True)
      title_name = db.Column(db.String(30), unique=True, nullable=False)
-     publisher_id = db.Column(db.Interger, db.ForeignKey("publisher.id", ondelete="CASCADE"), nullable=False)
+     publisher_id = db.Column(db.Integer, db.ForeignKey("publisher.id", ondelete="CASCADE"), nullable=False)
      
 
 
      def __repr__(self):
         # used to represent itself as form of string
 
-        return self "#{0} - Title Name: {1}".format(
+        return "#{0} - Title Name: {1}".format(
              self.id, self.tile_name
         ) 
 
