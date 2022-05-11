@@ -1,41 +1,46 @@
-from flask import render_template
+from flask import render_template, request, redirect, url_for
 from gamesreview import app, db
-from gamesreview.models import Publisher, Title
+from flask import session
+from gamesreview.models import Publisher, Title, User
 from werkzeug.security import generate_password_hash, check_password_hash
-
 
 
 @app.route("/")
 def index():
     return render_template("index.html")
 
+
 @app.route("/login", methods=["GET", "POST"])
-def login ():
+def login():
+    if request.method == "POST":
+        username = request.form.get("username")
+        passw = request.form.get("password")
+
+    if "User" in session:
+        # user logged in 
+    
+
+        login = User.query.filter_by(username=username)
+        if login is not None:
+            return redirect(url_for("register"))
     return render_template("login.html")
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    def register():
-     if request.method == "POST":
-        # check if username already exists in db
-        existing_user = gamesreview.db.users.find_one(
-            {"username": request.form.get("username").lower()})
-    
-        if existing_user:
-            flash("Username already exists")
-            return redirect(url_for("register"))
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
 
-        register = {
-            "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
-        }
-        gamesreview.db.users.insert_one(register)
+        register = User(username=username, password=password)
+        db.session.add(register)
+        db.session.commit()
 
-        # put the new user into 'session' cookie
-        session["user"] = request.form.get("username").lower()
-        flash("Registration Successful!")
-     return render_template("register.html")
-
-                     
- 
+        return redirect(url_for("login"))
     return render_template("register.html")
+
+
+    if __name__ == "__main__":
+        app.run(host=os.environ.get("IP"),
+            port=int(os.environ.get("PORT")),
+            debug=True)

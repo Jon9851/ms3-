@@ -28,6 +28,8 @@ class User(db.Model):
      username = db.Column(db.String(30), unique=True, nullable=False)
      password = db.Column(db.Text(), nullable=False)
 
+
+
      def __repr__(self):
         
         return "#{0} - Title Name: {1}".format(
