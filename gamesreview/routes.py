@@ -10,6 +10,11 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/games")
+def games():
+    return render_template("games.html")
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
