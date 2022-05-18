@@ -19,7 +19,7 @@ def games():
 def login():
     if request.method == "POST":
         username = request.form.get("username")
-        passw = request.form.get("password")
+        password = request.form.get("password")
 
     if "User" in session:
         # user logged in 
@@ -28,7 +28,7 @@ def login():
         login = User.query.filter_by(username=username)
         if login is not None:
             return redirect(url_for("register"))
-    return render_template("login.html")
+    return render_template("games.html")
 
 
 @app.route("/register", methods=["GET", "POST"])

@@ -12,7 +12,7 @@
 /* Slideshow container */
 .slideshow-container {
   position: relative;
-  background: #f1f1f1f1;
+  background: transparent;
   margin-top: 10%;
 }
 
@@ -22,7 +22,9 @@
   padding: 80px;
   text-align: center;
 }
-
+.mySlides q {
+ color: white;
+}
 /* Next & previous buttons */
 .prev,
 .next {
@@ -32,7 +34,7 @@
   width: auto;
   margin-top: -30px;
   padding: 16px;
-  color: #888;
+  color: white;
   font-weight: bold;
   font-size: 20px;
   border-radius: 0 3px 3px 0;
@@ -57,7 +59,7 @@
 .dot-container {
   text-align: center;
   padding: 20px;
-  background: #ddd;
+  background: transparent;
   width: auto;
 }
 
