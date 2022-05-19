@@ -19,7 +19,7 @@
 /* Slides */
 .mySlides {
   display: none;
-  padding: 80px;
+  padding: 70px;
   text-align: center;
 }
 .mySlides q {
@@ -32,7 +32,7 @@
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -30px;
+  margin-top: -20px;
   padding: 16px;
   color: white;
   font-weight: bold;
@@ -95,7 +95,6 @@ q {
     color: #01579b;
     font-size: 30px;
     font-family: 'Cookie', cursive;
-    font-family: 'Righteous', cursive;
 }
 .sidenav a{
   color:#01579b;
@@ -121,7 +120,7 @@ q {
   position: relative;
   width: 900px;
   height: 600px;
-  margin-left: 15%;
+  margin-left: 8%;
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -177,4 +176,41 @@ q {
 
 .row p{
   font-size: 15px;
+}
+/* footer style  */
+footer{
+  position: relative;
+  width: 100%;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    background: url(https://i.postimg.cc/3xcXrvnT/footer.png);
+    background-size: 1000px 100px;
+}
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 0.6;
+    bottom: 0;
+    animation: animatewave 40s linear infinite;
+}
+footer .waves p{
+  color: white;
+  font-size:xx-large;
+  text-align: center;
+}
+@keyframes animatewave {
+    0%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+  
 }

@@ -45,7 +45,7 @@ var slides = document.querySelectorAll('.slide');
 var buttons = document.querySelectorAll('.btn');
 let currentSlide = 1;
 
-//Autoplay Image Slider with Navigation 
+//Autoplay Image Slider 
 var repeat = function(activeClass){
     let active = document.getElementsByClassName('active');
     let i = 1;
@@ -71,3 +71,6 @@ var repeat = function(activeClass){
     repeater();
 }
 repeat();
+
+// footer image slider
+

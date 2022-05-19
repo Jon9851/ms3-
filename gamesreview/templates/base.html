@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
     {% block styles %}
-  {% endblock %}
+ 
     <title>Home</title>
 </head>
 <body>
@@ -36,16 +36,20 @@
 </div>
 
 </header>
-
+{% endblock %}
 <main class="container">
     {% block content %}
     {% endblock %}
 </main>
 
-
+<footer>
+    <div class="waves">
+      <div class="wave" id="wave1">
+        <p>All image used in the is project are for educational purposes only</p>
+    
+  </div>
+</footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{url_for('static', filename='js/script.js')}}"></script>
-    {% block script %}
-    {% endblock %}
 </body>
 </html>
