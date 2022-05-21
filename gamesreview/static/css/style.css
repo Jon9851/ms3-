@@ -178,39 +178,18 @@ q {
   font-size: 15px;
 }
 /* footer style  */
-footer{
-  position: relative;
-  width: 100%;
-  padding: 20px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-footer .wave{
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    background: url(https://i.postimg.cc/3xcXrvnT/footer.png);
-    background-size: 1000px 100px;
-}
-footer .wave#wave1{
-    z-index: 1000;
-    opacity: 0.6;
-    bottom: 0;
-    animation: animatewave 40s linear infinite;
-}
-footer .waves p{
-  color: white;
-  font-size:xx-large;
-  text-align: center;
-}
-@keyframes animatewave {
-    0%
-    {
-        background-position-x: 1000px;
-    }
-    100%
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+.row{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
   
 }

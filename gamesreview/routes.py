@@ -15,6 +15,18 @@ def games():
     return render_template("games.html")
 
 
+@app.route("/titles")
+def titles():
+    return render_template("titles.html")
+
+@app.route("/publisher")
+def publisher():
+    return render_template("publisher.html")
+
+
+
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -28,7 +40,7 @@ def login():
         login = User.query.filter_by(username=username)
         if login is not None:
             return redirect(url_for("register"))
-    return render_template("games.html")
+    return render_template("login.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
