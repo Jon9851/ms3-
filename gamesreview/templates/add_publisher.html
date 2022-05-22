@@ -3,32 +3,40 @@
  
 <div class="row">
     <div class="s1 m2">
-      <div class="card  green darken-2">
-        <div class="card-content blue-text text-darken-4 center-align">
+      <div class="card transparent">
+        <div class="card-content white-text center-align">
           <span class="card-title">Publishers</span>
         </div>
       </div>
     </div>
   </div>
-  <div class="row card-panel grey lighten-5">
+  <div class="row">
+    <div class="col s12 center-align">
+        <a href="{{ url_for('add_publisher') }}" class="btn-large green darken-2">
+            Add Publishers <i class="fas fa-plus-square right"></i>
+        </a>
+    </div>
+</div>
+<div class="row card-panel green darken-2">
     <form class="col s12" method="POST" action="{{ url_for('add_publisher') }}">
         <!-- category name -->
         <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
-                <input id="_name" name="category_name" minlength="3" maxlength="25" type="text" class="validate" required>
-                <label for="category_name">Category Name</label>
+            <div class="input-field col s12 green darken-2">
+                <i class="fas fa-folder-open prefix white-text"></i>
+                <input  id="publisher_name" name="publisher_name" minlength="3" maxlength="40" type="text" class="validate" required>
+                <label for="publisher_name">Publisher Name</label>
             </div>
         </div>
         <!-- submit button -->
         <div class="row">
             <div class="col s12 center-align">
-                <button type="submit" class="btn-large light-blue darken-1">
-                    Add Category <i class="fas fa-plus-square right"></i>
+                <button type="submit" class="btn-large green darken-2">
+                    Add Publisher <i class="fas fa-plus-square right"></i>
                 </button>
             </div>
         </div>
     </form>
 </div>
+
 
 {% endblock %}

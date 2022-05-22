@@ -23,6 +23,15 @@ def titles():
 def publisher():
     return render_template("publisher.html")
 
+@app.route("/add_publisher", methods=["GET", "POST"])
+def add_publisher():
+    if request.method == "POST":
+        publisher = Publisher(publisher_name=request.form.get("publisher_name"))
+        db.session.add(publisher)
+        db.session.commit()
+        return redirect(url_for("publisher"))
+    return render_template("add_publisher.html")
+
 
 
 
