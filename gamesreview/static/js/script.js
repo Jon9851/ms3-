@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
     let sidenav = document.querySelectorAll(".sidenav");
     M.Sidenav.init(sidenav);
 });
+// Drop Down initialization
+
+    let selects = document.querySelectorAll("select");
+    M.FormSelect.init(selects);
+
+
 //  text slider
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -72,5 +78,4 @@ var repeat = function(activeClass){
 }
 repeat();
 
-// footer image slider
 

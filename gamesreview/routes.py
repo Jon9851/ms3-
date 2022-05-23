@@ -21,7 +21,8 @@ def titles():
 
 @app.route("/publisher")
 def publisher():
-    return render_template("publisher.html")
+    publisher = list(Publisher.query.order_by(Publisher.publisher_name).all())
+    return render_template("publisher.html", publisher=publisher)
 
 @app.route("/add_publisher", methods=["GET", "POST"])
 def add_publisher():
@@ -33,7 +34,35 @@ def add_publisher():
     return render_template("add_publisher.html")
 
 
+@app.route("/edit_publisher/<int:publisher_id>", methods=["GET", "POST"])
+def edit_publisher(publisher_id):
+    publisher = Publisher.query.get_or_404(publisher_id)
+    if request.method == "POST":
+         publisher.publisher_name = request.form.get("publisher_name")
+         db.session.commit()
+         return redirect(url_for("publisher"))
+    return render_template("edit_publisher.html", publisher=publisher)
 
+@app.route("/delete_publisher/<int:publisher_id>")
+def delete_publisher(publisher_id):
+     publisher = Publisher.query.get_or_404(publisher_id)
+     db.session.delete(publisher)
+     db.session.commit()
+     return redirect(url_for("publisher"))
+
+
+@app.route("/add_titles", methods=["GET", "POST"])
+def add_titles():
+    publisher = list(Publisher.query.order_by(Publisher.publisher_name).all())
+    if request.method == "POST":
+        titles = Titles(
+            titles_name=request.form.get("titles_name"),
+            publisher_id=request.form.get("publisher_id")
+        )
+        db.session.add(titles)
+        db.session.commit()
+        return redirect(url_for("publisher"))
+    return render_template("add_titles.html", publisher=publisher)
 
 
 @app.route("/login", methods=["GET", "POST"])

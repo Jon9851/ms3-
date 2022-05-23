@@ -20,7 +20,7 @@ class Title(db.Model):
      id = db.Column(db.Integer, primary_key=True)
      title_name = db.Column(db.String(30), unique=True, nullable=False)
      publisher_id = db.Column(db.Integer, db.ForeignKey("publisher.id", ondelete="CASCADE"), nullable=False)
-     review = db.Column(db.Text, nullable=False)
+     
 
 
 class User(db.Model):

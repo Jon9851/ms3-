@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+ 
+<div class="row">
+    <div class="s1 m2">
+      <div class="card transparent">
+        <div class="card-content white-text center-align">
+          <span class="card-title"> Edit Publishers</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 center-align">
+        <a href="{{ url_for('add_publisher') }}" class="btn-large green darken-2">
+            Add Publishers <i class="fas fa-plus-square right"></i>
+        </a>
+    </div>
+</div>
+<div class="row card-panel green darken-2">
+    <form class="col s12" method="POST" action="{{ url_for('edit_publisher', publisher_id=publisher.id) }}">
+        <!-- category name -->
+        <div class="row">
+            <div class="input-field col s12 green darken-2">
+                <i class="fas fa-folder-open prefix white-text"></i>
+                <input  id="publisher_name" name="publisher_name" minlength="3" maxlength="40" type="text" class="validate" required>
+                <label for="publisher_name">Publisher Name</label>
+            </div>
+        </div>
+        <!-- submit button -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large green darken-2">
+                    Edit Publisher <i class="fas fa-plus-square right"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}

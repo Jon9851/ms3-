@@ -204,3 +204,7 @@ body {
 #publisher_name{
   color: white;
 }
+
+span .card-title{
+  text-align: center;
+}
