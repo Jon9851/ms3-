@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // sidenav initialization
     let sidenav = document.querySelectorAll(".sidenav");
     M.Sidenav.init(sidenav);
-});
+
 // Drop Down initialization
 
     let selects = document.querySelectorAll("select");
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let collapsible = document.querySelectorAll('.collapsible');
     M.Collapsible.init(collapsible);
 
-
+});
 //  text slider
 var slideIndex = 1;
 showSlides(slideIndex);

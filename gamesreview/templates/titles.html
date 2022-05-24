@@ -18,15 +18,19 @@
         </a>
     </div>
 </div>
-<ul class="collapsible popout green darken-2">
+<ul class="collapsible  green darken-2 white-text">
   {% for game in game %}
   <li>
-    <div class="collapsible-header green darken-2 white-text">
+    <div class="collapsible-header green-text darken-2">
       <i class="fa-solid fa-gamepad-modern"></i>
+      <strong>{{ game.publisher_name }}</strong>
+      
     </div>
-    <strong>{{ game.game_name }}</strong>
     <div class="collapsible-body">
-      <strong>{{ game.publisher }}</strong>
+      <strong>{{ game.publisher_name }}</strong>
+      <p>{{ game.game_name }}</p>
+
+     
       
     </div>
   </li>
