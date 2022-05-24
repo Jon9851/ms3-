@@ -17,7 +17,9 @@ def games():
 
 @app.route("/titles")
 def titles():
-    return render_template("titles.html")
+    game= list(Game.query.order_by(Game.id).all())
+    return render_template("titles.html", game=game)
+
 
 @app.route("/publisher")
 def publisher():
@@ -50,6 +52,10 @@ def delete_publisher(publisher_id):
      db.session.commit()
      return redirect(url_for("publisher"))
 
+@app.route("/")
+def game():
+    game = list(Game.query.order_by(Game.id).all())
+    return render_template("titles.html", game=game)
 
 @app.route("/add_game", methods=["GET", "POST"])
 def add_game():

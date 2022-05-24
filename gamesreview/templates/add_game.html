@@ -5,7 +5,7 @@
     <div class="s1 m2">
       <div class="card transparent">
         <div class="card-content white-text center-align">
-          <span class="card-title">Publishers</span>
+          <span class="card-title">Games</span>
         </div>
       </div>
     </div>
@@ -23,7 +23,7 @@
         <div class="row">
             <div class="input-field col s12 green darken-2">
                 <i class="fas fa-folder-open prefix white-text"></i>
-                <textarea  id="title_name" name="title_name" minlength="4" maxlength="50" 
+                <textarea  id="game_name" name="game_name" minlength="4" maxlength="50" 
                 type="text" class="materialize-textare validate" required></textarea>
                 <label for="game_name"></label>
             </div>
@@ -35,7 +35,7 @@
                 <select id="publisher_id" name="publisher_id" class="validate" required>
                     <option value="" disabled selected>Choose Publisher</option>
                     {% for publisher in publisher %}
-                        <option value="{{ publisher_id}}">{{ publisher.publisher_id }}</option>
+                        <option value="{{ publisher.id}}">{{ publisher.publisher_name }}</option>
                     {% endfor %}
                 </select>
                 <label for="publisher_id">publisher</label>
