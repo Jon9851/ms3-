@@ -83,9 +83,16 @@ def edit_game(game_id):
         db.session.commit()
         return redirect(url_for("titles"))
     return render_template("edit_game.html", game=game, publisher=publisher)
+
+@app.route("/delete_game/<int:game_id>")
+def delete_game(game_id):
+     game = Game.query.get_or_404(game_id)
+     db.session.delete(game)
+     db.session.commit()
+     return redirect(url_for("titles"))
     
 
-    if __name__ == "__main__":
+     if __name__ == "__main__":
         app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
