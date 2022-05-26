@@ -23,7 +23,7 @@
         <div class="row">
             <div class="input-field col s12 green darken-2">
                 <i class="fas fa-folder-open prefix white-text"></i>
-                <textarea  id="game_name" name="game_name" minlength="4" maxlength="50" 
+                <textarea  id="publisher_name" name="publisher_name" minlength="4" maxlength="50" 
                 type="text" class="materialize-textare validate" required></textarea>
                 <label for="game_name"></label>
             </div>
@@ -35,17 +35,17 @@
                 <select id="publisher_id" name="publisher_id" class="validate" required>
                     <option value="" disabled selected>Choose Publisher</option>
                     {% for publisher in publisher %}
-                        <option value="{{ publisher.id}}">{{ publisher.publisher_name }}</option>
+                    <option value="{{ publisher.id}}">{{ publisher.publisher_name }}</option>
                     {% endfor %}
                 </select>
-                <label for="publisher_id">publisher</label>
+                <label for="publisher_id">Game</label>
             </div>
         </div>
         <!-- submit button -->
         <div class="row">
             <div class="col s12 center-align">
                 <button type="submit" class="btn-large green darken-2">
-                    Add titles <i class="fas fa-plus-square right"></i>
+                    Add Games <i class="fas fa-plus-square right"></i>
                 </button>
             </div>
         </div>

@@ -64,16 +64,26 @@ def add_game():
     Publisher.publisher_name).all())
     if request.method == "POST":
         game = Game(
+
             game_name=request.form.get("game_name"),
             publisher_id=request.form.get("publisher_id")
+        
         )
         db.session.add(game)
         db.session.commit()
         return redirect(url_for("titles"))
     return render_template("add_game.html", publisher=publisher)
 
-
-
+@app.route("/edit_game/<int:game_id>", methods=["GET", "POST"])
+def edit_game(game_id):
+    game = Game.query.get_or_404(game_id)
+    if request.method == "POST":
+        game.game_name = request.form.get("game_name"),
+        publisher_id=request.form.get("publisher_id")
+        db.session.commit()
+        return redirect(url_for("titles"))
+    return render_template("edit_game.html", game=game, publisher=publisher)
+    
 
     if __name__ == "__main__":
         app.run(host=os.environ.get("IP"),

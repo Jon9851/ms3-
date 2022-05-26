@@ -18,23 +18,23 @@
         </a>
     </div>
 </div>
-<ul class="collapsible  green darken-2 white-text">
+<ul class="collapsible -text">
+  {%  for pub in publisher %}
   {% for game in game %}
   <li>
-    <div class="collapsible-header green-text darken-2">
+    <div class="collapsible-header green white-text">
       <i class="fa-solid fa-gamepad-modern"></i>
-      <strong>{{ game.publisher_name }}</strong>
+      <strong>{{ pub.publisher_name }}</strong>
       
     </div>
-    <div class="collapsible-body">
-      <strong>{{ game.publisher_name }}</strong>
-      <p>{{ game.game_name }}</p>
-
-     
-      
+    <div class="collapsible-body white green-text">
+      <strong>{{ game.game_name }}</strong>
+        <a href="{{ url_for('edit_game', game_id=game.id) }}" class="btn green accent-4">Edit</a>
     </div>
   </li>
  {% endfor %}
-    
+ {% endfor %}
+
 </ul>
+
 {% endblock %}
