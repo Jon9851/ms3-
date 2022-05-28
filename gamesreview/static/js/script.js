@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
     
     let collapsible = document.querySelectorAll('.collapsible');
     M.Collapsible.init(collapsible);
+ 
+ //delete modal inititalisation
+    let modal = document.querySelectorAll('.modal');
+    M.Modal.init(modal);
 
 });
 //  text slider
