@@ -208,3 +208,25 @@ body {
 .card-title{
   text-align: center;
 }
+
+
+
+.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-small, .modal .modal-footer .btn-flat {
+  margin-left: 38%;
+}
+/*game modal button postioning */
+.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-small, .modal .modal-footer .btn-flat {
+  margin-right: 40%;
+}
+/* h4 and p elements */
+.modal h4 {
+  font-size: 2.28rem;
+  line-height: 110%;
+  margin: 1.52rem 0 .912rem 0;
+  text-align: center;
+  transform: scaleX(1), scaleY(1) ;
+}
+
+p{
+ text-align: center;
+}

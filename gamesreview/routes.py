@@ -1,5 +1,5 @@
 from flask import render_template, request, redirect, url_for
-from gamesreview import app, db
+from gamesreview import app, db, mongo
 from flask import session
 from gamesreview.models import Publisher, Game
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -91,6 +91,13 @@ def delete_game(game_id):
      db.session.commit()
      return redirect(url_for("titles"))
     
+
+
+@app.route("/")
+@app.route("/reviews")
+def reviews():
+     rev = mongo.db.ms3.find()
+     return render_template("reviews.html", reviews=reviews)
 
      if __name__ == "__main__":
         app.run(host=os.environ.get("IP"),
