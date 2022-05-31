@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-    {% reviews in review %}
-       {{ review.game_genre }}<br>
-       {{ review.game_rating }}<br>
-       {{ review.game_review }}<br>
+    {% for reviews in review %}
+       {{ reviews.game_genre }}<br>
+       {{ reviews.game_rating }}<br>
+       {{ reviews.game_review }}<br>
     {% endfor %}
 
         
-    {% endblock %}
+{% endblock %}

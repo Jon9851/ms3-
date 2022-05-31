@@ -2,15 +2,21 @@ from flask import flash, render_template, request, redirect, url_for
 from bson.objectid import ObjectId
 from gamesreview import app, db, mongo
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask import session
+from flask import session, Flask
 from gamesreview.models import Publisher, Game
+from flask_pymongo import PyMongo
 import os
 
-if os.path.exists('eny.py'):
+if os.path.exists('env.py'):
     import env
 
-app.config["MONGO_DBNAME"] = os.getenv('MONGO_DBNAME')
-app.config["MONGO_URI"] = os.getenv('MONGO_URI')
+mongoapp = Flask(__name__)
+
+mongoapp.config["MONGO_DBNAME"] = os.getenv('MONGO_DBNAME')
+mongoapp.config["MONGO_URI"] = os.getenv('MONGO_URI')
+
+# Redefining from line 3 during testing
+
 
 
 @app.route("/")
@@ -103,14 +109,8 @@ def delete_game(game_id):
 
 @app.route("/reviews")
 def reviews():
-     review = list(mongo.db.review.find())
-     return render_template("reviews.html", review=review)
+    print(mongo)
+    review = list(mongo.db.review.find())
+    return render_template("reviews.html", review=review)
 
 
-
-
-
-     if __name__ == "__main__":
-        app.run(host=os.environ.get("IP"),
-            port=int(os.environ.get("PORT")),
-            debug=True)
