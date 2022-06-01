@@ -1,10 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
-    {% for reviews in review %}
-       {{ reviews.game_genre }}<br>
-       {{ reviews.game_rating }}<br>
-       {{ reviews.game_review }}<br>
-    {% endfor %}
+<div class="row">
+    <div class="s1 m2">
+      <div class="card transparent">
+        <div class="card-content white-text text-darken-4 center-align">
+          <span class="card-title">Reviews</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        
+<div class="row col s12 m3 l6">
+    <div class="col s12 center-align">
+        <a href="{{ url_for('add_reviews') }}" class="btn-large green darken-2">
+            Add Reviews<i class="fas fa-plus-square right"></i>
+        </a>
+    </div>
+</div>
+
+<ul class="collapsible">
+    {% for games in game %}
+    {% for reviews in review %}
+    <li>
+      <div class="collapsible-header white green-text darken-2">
+        <strong>{{ games.game_name }}</strong>
+      <div class="collapsible-body green darken-2 white-text ">
+        {{ reviews.game_genre }}<br>
+        {{ reviews.game_rating }}<br>
+        {{ reviews.game_review }}<br>
+     </li>
+    {% endfor %}
+    {% endfor %}
+  </ul>
+    
+ 
 {% endblock %}
+

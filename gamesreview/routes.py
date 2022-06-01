@@ -106,11 +106,15 @@ def delete_game(game_id):
      return redirect(url_for("titles"))
     
 
-
 @app.route("/reviews")
 def reviews():
     print(mongo)
     review = list(mongo.db.review.find())
     return render_template("reviews.html", review=review)
 
+
+
+@app.route("/add_reviews", methods=["GET", "POST"])
+def add_reviews():
+    return render_template("add_reviews.html", reviews=reviews)
 
