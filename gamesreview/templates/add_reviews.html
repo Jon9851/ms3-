@@ -17,7 +17,8 @@
         </a>
     </div>
 </div>
-<ul class="collection col s12 green darken-2" method="post" action="">
+<ul class="collection col s12 green darken-2" method="post" action="{{ url_for('add_reviews') }}">
+  <form method="post" action="">
     <div class="input-field col s12 white-text"></div>
     {%  for reviews in review %}
     <option value="{{ review.game_reivew}}">{{ review.game_reivew}}</option>
@@ -45,6 +46,14 @@
       <label for="game_genre">Game Genre</label>
     </li>
   </div>
+  <div class="row">
+    <div class="col s12 center-align">
+        <button type="submit" class="btn-large green darken-2 white-text">
+            Add Review <i class="fas fa-plus-square right"></i>
+        </button>
+    </div>
+ </div>
+</form>
   </ul>
 
 {% endblock %}

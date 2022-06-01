@@ -116,5 +116,21 @@ def reviews():
 
 @app.route("/add_reviews", methods=["GET", "POST"])
 def add_reviews():
-    return render_template("add_reviews.html", reviews=reviews)
+    if request.method == "POST":
+        rev = {
 
+            "game_review": request.form.get("game_review"),
+            "game_rating": request.form.get("game_rating"),
+            "game_genre": request.form.get("game_genre")
+        }
+        mongo.db.review._insert_one(rev)
+        return redirect(url_for("reviews"))
+
+    rev = mongo.db.review.find().sort("game_review", 1)
+    return render_template("add_reviews.html")
+
+
+if __name__ == "__main__":
+    app.run(host=os.environ.get("IP"),
+            port=int(os.environ.get("PORT")),
+            debug=True)

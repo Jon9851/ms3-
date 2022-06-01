@@ -18,7 +18,7 @@
   <nav>
     <div class="nav-wrapper green darken-2">
       <a href="#!" class="brand-logo">Games Review</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"></a>
+      <a href="#!" data-target="mobile-demo" class="sidenav"></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="{{ url_for('index') }}">Home</a></li>
         <li><a href="{{ url_for('games') }}">Games</a></li>
@@ -28,7 +28,6 @@
         <li><a href="{{ url_for('titles') }}">Titles</a></li>
         <li><a href="{{ url_for('publisher') }}">Publishers</a></li>
       </ul>
-  
 
   <ul class="sidenav green draken-2" id="mobile-demo">
     <li><a href="{{ url_for('index') }}">Home</a></li>
@@ -39,6 +38,7 @@
     <li><a href="{{ url_for('titles') }}">Titles</a></li>
     <li><a href="{{ url_for('publisher') }}">Publishers</a></li>
     </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
    </nav>
 
   </div>
@@ -62,8 +62,6 @@
   
 </footer>
     
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{url_for('static', filename='js/script.js')}}"></script>
 </body>
