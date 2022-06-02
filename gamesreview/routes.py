@@ -81,7 +81,6 @@ def add_game():
 
             game_name=request.form.get("game_name"),
             publisher_id=request.form.get("publisher_id")
-        
         )
         db.session.add(game)
         db.session.commit()
@@ -108,26 +107,8 @@ def delete_game(game_id):
 
 @app.route("/reviews")
 def reviews():
-    print(mongo)
-    review = list(mongo.db.review.find())
-    return render_template("reviews.html", review=review)
+    return render_template("reviews.html", reviews=reviews)
 
-
-
-@app.route("/add_reviews", methods=["GET", "POST"])
-def add_reviews():
-    if request.method == "POST":
-        rev = {
-
-            "game_review": request.form.get("game_review"),
-            "game_rating": request.form.get("game_rating"),
-            "game_genre": request.form.get("game_genre")
-        }
-        mongo.db.review._insert_one(rev)
-        return redirect(url_for("reviews"))
-
-    rev = mongo.db.review.find().sort("game_review", 1)
-    return render_template("add_reviews.html")
 
 
 if __name__ == "__main__":
