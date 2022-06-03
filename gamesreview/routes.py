@@ -120,16 +120,13 @@ def add_reviews():
             game_review = request.form.get("game_review"),
             game_rating = request.form.get("game_rating"),
             game_genre = request.form.get("game_genre"),
-            game_id = request.form.get("game_id")
+            game_id = int(request.form.get("game_id"))
 
         )
         db.session.add(reviews)
         db.session.commit()
         return redirect(url_for("reviews"))
     return render_template("add_reviews.html", reviews=reviews)
-
-
-
 
 
 
