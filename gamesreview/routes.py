@@ -107,11 +107,32 @@ def delete_game(game_id):
 
 @app.route("/reviews")
 def reviews():
+    reviews = list(Review.query.order_by(
+        Review.game_review).all())
     return render_template("reviews.html", reviews=reviews)
 
+@app.route("/add_reviews", methods=["GET", "POST"])
+def add_reviews():
+    reviews = list(Review.query.order_by(
+        Review.game_review).all())
+    if request.method == "POST":
+        reviews = Reviews(
+            game_review.form.get("game_review"),
+            game_rating.form.get("game_rating"),
+            game_genre.form.get("game_genre"),
+            game_id=request.form.get("game_id")
+
+        )
+        db.session.add(reviews)
+        db.session.commit()
+        return redirect(url_for("reviews"))
+    return render_template("add_reviews.html", reviews=reviews, game=game)
 
 
-if __name__ == "__main__":
+
+
+
+
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)

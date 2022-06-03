@@ -26,7 +26,7 @@ class Reviews(db.Model):
         game_review = db.Column(db.String(300), unique=True, nullable=True)
         game_rating = db.Column(db.String(30), unique=True, nullable=True)
         game_genre = db.Column(db.String(30), unique=True, nullable=True)
-        game_id = db.Column(db.Integer, db.ForeignKey("publisher.id", ondelete="CASCADE"), nullable=False)
+        game_id = db.Column(db.Integer, db.ForeignKey("game.id", ondelete="CASCADE"), nullable=False)
      
         
         def __repr__(self):
