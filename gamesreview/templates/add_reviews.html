@@ -18,7 +18,7 @@
     </div>
 </div>
 <ul class="collection col s12 green darken-2" method="post" action="{{ url_for('add_reviews') }}">
-  <form method="post" action="{{ url_for('reviews') }}">
+  <form method="post" action="{{ url_for('add_reviews') }}">
     <div class="input-field col s12 white-text"></div>
     {%  for reviews in review %}
     <option value="{{ review.game_reivew}}">{{ review.game_reivew}}</option>
@@ -52,8 +52,8 @@
             Add Review <i class="fas fa-plus-square right"></i>
         </button>
     </div>
- </div>
-</form>
-  </ul>
+  </div>
+ </form>
+</ul>
 
 {% endblock %}
