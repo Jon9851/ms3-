@@ -19,5 +19,5 @@ db = SQLAlchemy(app)
 mongo = PyMongo(app)
 
 
-from gamesreview import routes #noqa
+from gamesreviewbeta import routes #noqa
  

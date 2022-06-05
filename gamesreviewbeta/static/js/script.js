@@ -1,5 +1,5 @@
+ document.addEventListener("DOMContentLoaded", function() {
  // sidenav initialization
-document.addEventListener("DOMContentLoaded", function() {
     let sidenav = document.querySelectorAll(".sidenav");
     M.Sidenav.init(sidenav);
 
@@ -8,8 +8,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let selects = document.querySelectorAll("select");
     M.FormSelect.init(selects);
     
-    let collapsible = document.querySelectorAll('.collapsible');
+    collapsible = document.querySelectorAll('.collapsible');
     M.Collapsible.init(collapsible);
+    
  
  //delete modal inititalisation
     let modal = document.querySelectorAll('.modal');
@@ -17,12 +18,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 });
+
 //  text slider
 var slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
-  showSlides((slideIndex += n));
+  showSlides((slideIndex += n));d
 }
 
 function currentSlide1(n) {

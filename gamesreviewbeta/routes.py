@@ -1,9 +1,9 @@
 from flask import flash, render_template, request, redirect, url_for
 from bson.objectid import ObjectId
-from gamesreview import app, db, mongo
+from gamesreviewbeta import app, db, mongo
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import session, Flask
-from gamesreview.models import Publisher, Game, Reviews
+from gamesreviewbeta.models import Publisher, Game, Reviews
 from flask_pymongo import PyMongo
 import os
 
@@ -113,23 +113,20 @@ def reviews():
 
 @app.route("/add_reviews", methods=["GET", "POST"])
 def add_reviews():
-    reviews = list(Reviews.query.order_by(
-        Reviews.game_review).all())
-    if request.method == "POST":
+     game = list(Game.query.order_by(Game.game_name).all())
+     if request.method == "POST":
         reviews = Reviews(
-            game_review = request.form.get("game_review"),
-            game_rating = request.form.get("game_rating"),
-            game_genre = request.form.get("game_genre"),
-            game_id = int(request.form.get("game_id"))
-
+            game_review=request.form.get("game_review"),
+            game_rating=request.form.get("game_rating"),
+            game_genre=request.form.get("game_genre"),
+            game_id=request.form.get("game_id")
         )
         db.session.add(reviews)
         db.session.commit()
         return redirect(url_for("reviews"))
-    return render_template("add_reviews.html", reviews=reviews)
+     return render_template("add_reviews.html", game=game)
 
 
-
-    app.run(host=os.environ.get("IP"),
+app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
