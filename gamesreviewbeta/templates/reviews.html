@@ -16,19 +16,18 @@
     </a>
   </div>
 </div>
+  {%  if game|length > 0 %} 
 <ul class="collapsible">
-  {%  for game in game %} 
-  {% for reviews in reviews %} 
-  <li>
+   {% for reviews in reviews %} 
+    <li>
     <div class="collapsible-header green white-text">
       <i class="fa-solid fa-gamepad-modern"></i>
-      <strong>{{ game.game_name }}</strong> 
+      <strong>{{ game.games_name }}</strong> 
     </div>
     <div class="collapsible-body white green-text">
-      <strong>{{ game.game_name }}</strong>
       <p>{{ reviews.game_review }}</p>
       <p>{{ reviews.game_rating }}</p>
-      <p>{{ reviews_game_genre }}</p>
+      <p>{{ reviews.game_genre }}</p>
       <div>
         <a href="{{ url_for('edit_reviews', reviews_id=reviews.id) }}" class="btn green accent-4">Edit</a>
         <a href="#modal-{{ game.id }}" class="btn red modal-trigger col m4">Delete</a>
@@ -46,7 +45,7 @@
     </div>
   </li>
   {% endfor %} 
-  {% endfor %} 
 </ul> 
+{% endif %} 
 {% endblock %}
 

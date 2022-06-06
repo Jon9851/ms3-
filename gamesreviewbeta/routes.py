@@ -125,7 +125,12 @@ def add_publisher():
 
 @app.route("/edit_publisher/<int:publisher_id>", methods=["GET", "POST"])
 def edit_publisher(publisher_id):
-    publisher = Publisher.query.get_or_404(publisher_id)
+
+    if "user" not in session or session["user"] != "admin":
+        flash("You must be admin to delete publishers!")
+        return redirect(url_for("publishers"))
+
+        publisher = Publisher.query.get_or_404(publisher_id)
     if request.method == "POST":
          publisher.publisher_name = request.form.get("publisher_name")
          db.session.commit()
@@ -198,7 +203,21 @@ def add_reviews():
         return redirect(url_for("reviews"))
      return render_template("add_reviews.html", game=game)
 
+@app.route("/edit_reviews/<int:review_id>", methods=["GET", "POST"])
+def edit_reviews(reviews_id):
+    reviews=Reviews.query.get_or_404(review_id)
+    if request.method == "POST":
+        reviews.game_review = request.form.get("game_review"),
+        reviews.game_rating = request.form.get("game_rating"),
+        reviews.game_genre = request.form.get("game_genre"),
+        publisher_id=request.form.get("publisher_id")
+        db.session.commit()
+        return redirect(url_for("reviews"))
+    return render_template("edit_review.html", reviews, game=game)
 
-app.run(host=os.environ.get("IP"),
-            port=int(os.environ.get("PORT")),
-            debug=True)
+@app.route("/delete_reviews/<int:review_id>")
+def delete_reviews(reviews_id):
+     reviews = Reviews.query.get_or_404(reviews_id)
+     db.session.delete(reviews)
+     db.session.commit()
+     return redirect(url_for("reviews"))

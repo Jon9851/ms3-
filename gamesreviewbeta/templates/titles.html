@@ -17,13 +17,13 @@
         </a>
     </div>
 </div>
+{%  if publisher| length > 0 %}
 <ul class="collapsible">
-  {%  for pub in publisher %}
   {% for game in game %}
   <li>
-    <div class="collapsible-header green white-text">
+    <div class="collapsible-header green darken-2 white-text">
       <i class="fa-solid fa-gamepad-modern"></i>
-      <strong>{{ pub.publisher_name }}</strong>
+      <strong>{{ publisher.publisher_name }}</strong>
     </div>
     <div class="collapsible-body white green-text">
       <strong>{{ game.game_name }}</strong>
@@ -44,7 +44,8 @@
       </div>
     </div>
   </li>
-  {% endfor %}
+ 
   {% endfor %}
 </ul>
+{% endif %}
 {% endblock %}
