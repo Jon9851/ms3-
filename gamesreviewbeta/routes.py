@@ -23,6 +23,32 @@ mongoapp.config["MONGO_URI"] = os.getenv('MONGO_URI')
 def index():
     return render_template("index.html")
 
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "POST":
+        # checks if username already exists in db
+        existing_user = mongo.db.user.find_one(
+            {"username":request.form.get("username").lower()})
+
+        if existing_user:
+            flash("Username already exists")
+            return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+            
+            }
+        mongo.db.users.insert_one(register)
+
+        # put the new user into 'session' cookie
+        session["user"] = request.form.get("username").lower()
+        flash("Registration Succesfull")
+    return render_template("register.html")
 
 @app.route("/games")
 def games():

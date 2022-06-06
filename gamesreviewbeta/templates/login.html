@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align">Log In</h3>
+<h3 class="center-align"></h3>
 
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="">
@@ -9,7 +9,7 @@
                 <!-- username -->
                 <div class="row">
 					<div class="input-field col s12">
-						<i class="fas fa-user-cog prefix blue-text darken-4"></i>
+						<i class="fas fa-user-cog prefix white-text text-darken-4"></i>
 						<input id="username" name="username" type="text" minlength="5"
                             maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
 						<label for="username">Username</label>
@@ -18,7 +18,7 @@
                 <!-- passowrd -->
                 <div class="row">
                     <div class="input-field col s12">
-						<i class="fas fa-user-lock prefix blue-text text-darken-4"></i>
+						<i class="fas fa-user-lock prefix white-text text-darken-4"></i>
                         <input id="password" name="password" type="password" minlength="5"
                             maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                         <label for="password">Password</label>
@@ -26,17 +26,16 @@
                 </div>
                 <!-- login -->
                 <div class="row">
-                    <button type="submit" class="col s12 btn-large blue darken-4 text-shadow">
-                        Log In <i class="fas fa-sign-in-alt"></i>
+                    <button type="submit" class="col s12 btn-large white green-text text-darken-2">
+                        Log In<i class="fas fa-sign-in-alt"></i>
                     </button>
+                    <div id="us">
+                    <a href="{{ url_for('register') }}" class="white-text center-align">Register Here</a>
+                  </div>
                 </div>
             </div>
         </form>
     </div>
-    <div class="row">
-        <div class="col s12 m6 l3">
-                <a href="" class="blue-text text-darken-4 center-align">Register here</a>
-        </div>
-    </div>
+</div>
     
     {% endblock %}
