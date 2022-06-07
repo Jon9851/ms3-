@@ -115,6 +115,16 @@ q {
   font-size: 20px;
   }
 }
+.welcome{
+  font-size: 30px;
+  color: white;
+  padding-top: 1%;
+  margin-top: 2%;
+  font-weight: 900;
+  background-color: green;
+  opacity: 0.7;
+ 
+}
 /* image slider */
 .img-slider{
   position: relative;
@@ -141,7 +151,7 @@ q {
 .img-slider .slide img{
   z-index: 1;
   width: 100%;
-  margin-left: 15%;
+  margin-left: 12%;
   padding: 15px;
   border-radius: 50px;
   opacity: 0.8;
