@@ -17,8 +17,9 @@
         </a>
     </div>
 </div>
+
 <ul class="collection col s12 green darken-2" method="post" action="{{ url_for('add_reviews') }}">
-  <form method="post" action="{{ url_for('add_reviews') }}">
+  <form col s12 method="post" action="{{ url_for('edit_reviews', reviews_id=reviews.id) }}">
     <div class="input-field col s12 white-text"></div>
     {%  for reviews in review %}
     <option value="{{ review.game_reivew}}">{{ review.game_reivew}}</option>
@@ -29,7 +30,6 @@
       <input id="game_reivew" name="game_review" minlength="20" maxlength="250" type="text" class="validate">
       <label for="game_review">Game Review</label>
     </li>
-  </div>
   <div class="input-field col s12 white-text">
     <li class="collection-item avatar green darken-2">
         <span class="title">Game Rating</span>
@@ -46,22 +46,28 @@
       <label for="game_genre">Game Genre</label>
     </li>
   </div>
-  <div class="input-field col s12 white-text">
-    <li class="collection-item avatar green darken-2">
-        <span class="title">Game ID</span>
-      <img src="{{url_for('static', filename='image/genre.png')}}" alt="" class="circle">
-      <input id="game_genre" name="game_genre" minlength="1" maxlength="20" type="text" class="validate">
-      <label for="game_genre">Game ID</label>
-    </li>
-  </div>
+  <div class="row">
+    <div class="input-field col s12">
+        <i class="fas fa-folder-open prefix col white-text green darken-2"></i>
+        <select id="game_id" name="game_id" class="validate" required>
+            <option value="" disabled selected>Choose Game</option>
+            {% for game in game %}
+            <option value="{{ game.id }}">{{ game.game_name }}</option>
+            {% endfor %}
+        </select>
+        <label for="game_id">Game</label>
+    </div>
+   </div>  
+  </form>
   <div class="row">
     <div class="col s12 center-align">
         <button type="submit" class="btn-large green darken-2 white-text">
             Add Review <i class="fas fa-plus-square right"></i>
         </button>
     </div>
-  </div>
- </form>
-</ul>
+   </div>
+ </ul>
+
+
 
 {% endblock %}
