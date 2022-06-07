@@ -215,6 +215,7 @@ def add_reviews():
 @app.route("/edit_reviews/<int:reviews_id>", methods=["GET", "POST"])
 def edit_reviews(reviews_id):
     reviews = Reviews.query.get_or_404(reviews_id)
+    game = list(Game.query.order_by(Game.game_name).all())
     if request.method == "POST":
         reviews.game_review = (request.form.get("game_review"),)
         reviews.game_rating = (request.form.get("game_rating"),)
@@ -222,7 +223,7 @@ def edit_reviews(reviews_id):
         game_id = request.form.get("game_id")
         db.session.commit()
         return redirect(url_for("reviews"))
-    return render_template("edit_reviews.html", reviews=reviews)
+    return render_template("edit_reviews.html", reviews=reviews, game=game)
 
 
 @app.route("/delete_reviews/<int:reviews_id>")

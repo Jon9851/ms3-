@@ -1,72 +1,80 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="row">
-    <div class="s1 m2">
-      <div class="card transparent">
-        <div class="card-content white-text text-darken-4 center-align">
-          <span class="card-title">Edit Reviews</span>
-        </div>
+  <div class="s1 m2">
+    <div class="card transparent">
+      <div class="card-content white-text text-darken-4 center-align">
+        <span class="card-title">Reviews</span>
       </div>
     </div>
   </div>
-
-<div class="row col s12 m3 l6">
-    <div class="col s12 center-align">
-        <a href="{{ url_for('add_reviews') }}" class="btn-large green darken-2">
-            Add Reviews<i class="fas fa-plus-square right"></i>
-        </a>
-    </div>
 </div>
-
+<div class="row col s12 m3 l6">
+  <div class="col s12 center-align">
+      <a href="{{ url_for('add_reviews') }}" class="btn-large green darken-2">
+          Add Reviews<i class="fas fa-plus-square right"></i>
+      </a>
+  </div>
+</div>
+<div>
 <ul class="collection col s12 green darken-2" method="post" action="{{ url_for('add_reviews') }}">
-  <form col s12 method="post" action="{{ url_for('edit_reviews', reviews_id=reviews.id) }}">
-    <div class="input-field col s12 white-text"></div>
-    {%  for reviews in review %}
-    <option value="{{ review.game_reivew}}">{{ review.game_reivew}}</option>
-    {% endfor %}
-    <li class="collection-item avatar green darken-2">
-        <span class="title">Review</span>
-      <img src="{{url_for('static', filename='image/reveiw.png')}}" alt="" class="circle">
-      <input id="game_reivew" name="game_review" minlength="20" maxlength="250" type="text" class="validate">
-      <label for="game_review">Game Review</label>
-    </li>
-  <div class="input-field col s12 white-text">
-    <li class="collection-item avatar green darken-2">
-        <span class="title">Game Rating</span>
-      <img src="{{url_for('static', filename='image/rating.png')}}" alt="" class="circle">
-      <input id="game_rating" name="game_rating" minlength="1" maxlength="10" type="text" class="validate">
-      <label for="game_rating">Game Rating</label>
-    </li>
+<form method="post" action="{{ url_for('edit_reviews', reviews_id=reviews.id) }}">
+  <div class="input-field col s12 white-text"></div>
+  {%  for review in Reviews %}
+  <option value="{{ review.game_reivew}}">{{ reviews.game_reivew}}</option>
+  {% endfor %}
+  <li class="collection-item avatar green darken-2">
+      <span class="title">Review</span>
+    <img src="{{url_for('static', filename='image/reveiw.png')}}" alt="" class="circle">
+    <input id="game_reivew" name="game_review" minlength="20" maxlength="250" type="text" class="validate">
+    <label for="game_review">Game Review</label>
+  </li>
+<div class="input-field col s12 white-text">
+  <li class="collection-item avatar green darken-2">
+      <span class="title">Game Rating</span>
+    <img src="{{url_for('static', filename='image/rating.png')}}" alt="" class="circle">
+    <input id="game_rating" name="game_rating" minlength="1" maxlength="10" type="text" class="validate">
+    <label for="game_rating">Game Rating</label>
+  </li>
+</div>
+<div class="input-field col s12 white-text">
+  <li class="collection-item avatar green darken-2">
+      <span class="title">Game Genre</span>
+    <img src="{{url_for('static', filename='image/genre.png')}}" alt="" class="circle">
+    <input id="game_genre" name="game_genre" minlength="3" maxlength="20" type="text" class="validate">
+    <label for="game_genre">Game Genre</label>
+  </li>
+</div>
+<li class="collection-item avatar green darken-2">
+  <span class="title">Game</span>
+<img src="{{url_for('static', filename='image/genre.png')}}" alt="" class="circle">
+<input id="game_name" name="game_name" minlength="3" maxlength="20" type="text" class="validate">
+<label for="game_name">Game Name</label>
+</li>
+<!-- game id  -->
+<div class="row">
+  <div class="input-field col s12">
+      <i class="fas fa-folder-open prefix col white-text green darken-2"></i>
+      <select id="game_id" name="game_id" class="validate" required>
+          <option value="" disabled selected>Choose Game</option>
+          {% for game in game %}
+          <option value="{{ game.id }}">{{ game.game_name }}</option>
+          {% endfor %}
+      </select>
+      <label for="game_id">Game</label>
   </div>
-  <div class="input-field col s12 white-text">
-    <li class="collection-item avatar green darken-2">
-        <span class="title">Game Genre</span>
-      <img src="{{url_for('static', filename='image/genre.png')}}" alt="" class="circle">
-      <input id="game_genre" name="game_genre" minlength="10" maxlength="20" type="text" class="validate">
-      <label for="game_genre">Game Genre</label>
-    </li>
-  </div>
-  <div class="row">
-    <div class="input-field col s12">
-        <i class="fas fa-folder-open prefix col white-text green darken-2"></i>
-        <select id="game_id" name="game_id" class="validate" required>
-            <option value="" disabled selected>Choose Game</option>
-            {% for game in game %}
-            <option value="{{ game.id }}">{{ game.game_name }}</option>
-            {% endfor %}
-        </select>
-        <label for="game_id">Game</label>
-    </div>
-   </div>  
-  </form>
-  <div class="row">
-    <div class="col s12 center-align">
-        <button type="submit" class="btn-large green darken-2 white-text">
-            Add Review <i class="fas fa-plus-square right"></i>
-        </button>
-    </div>
+</div>
+<div class="row">
+  <div class="col s12 center-align">
+      <button type="submit" class="btn-large green darken-2 white-text">
+          Add Review <i class="fas fa-plus-square right"></i>
+      </button>
    </div>
+  </div>
+ </form>
  </ul>
+
+
 
 
 
