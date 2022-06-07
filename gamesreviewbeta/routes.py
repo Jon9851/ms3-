@@ -135,7 +135,7 @@ def edit_publisher(publisher_id):
         flash("You must be admin to delete publishers!")
         return redirect(url_for("publishers"))
 
-        publisher = Publisher.query.get_or_404(publisher_id)
+    publisher = Publisher.query.get_or_404(publisher_id)
     if request.method == "POST":
         publisher.publisher_name = request.form.get("publisher_name")
         db.session.commit()
