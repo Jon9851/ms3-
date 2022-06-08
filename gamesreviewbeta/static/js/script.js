@@ -24,7 +24,7 @@ var slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
-  showSlides((slideIndex += n));d
+  showSlides((slideIndex += n));
 }
 
 function currentSlide1(n) {

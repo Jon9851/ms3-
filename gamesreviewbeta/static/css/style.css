@@ -167,7 +167,7 @@ q {
 .img-slider .slide img{
   z-index: 1;
   width: 100%;
-  margin-left: 15%;
+  margin-left: 13%;
   padding: 15px;
   border-radius: 50px;
   opacity: 0.8;
@@ -175,20 +175,21 @@ q {
 
 /* image slider resonpsiveness */
 @media (max-width: 920px){
-  .img-slider .slide{
+  .img-slider{
     width: 80%;
     margin-right: 70%;
   }
 }
 @media (max-width: 620px){
-  .img-slider{
-    width: 400px;
+  .img-slider {
+    width: 425px;
     height: 250px;
-    margin-left: 23%;
-  }
+    padding: 0%;
+    margin: 6%;
+   }
 }
 @media (max-width: 420px){
-  .img-slider .slide{
+  .img-slider{
     width: 100%;
     margin-left: 10%;
     padding: 50px; 
