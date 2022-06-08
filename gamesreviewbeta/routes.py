@@ -131,10 +131,6 @@ def add_publisher():
 @app.route("/edit_publisher/<int:publisher_id>", methods=["GET", "POST"])
 def edit_publisher(publisher_id):
 
-    if "user" not in session or session["user"] != "admin":
-        flash("You must be admin to delete publishers!")
-        return redirect(url_for("publishers"))
-
     publisher = Publisher.query.get_or_404(publisher_id)
     if request.method == "POST":
         publisher.publisher_name = request.form.get("publisher_name")
