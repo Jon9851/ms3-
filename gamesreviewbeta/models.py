@@ -19,7 +19,7 @@ class Game(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     game_name = db.Column(db.String(30), unique=True, nullable=True)
     publisher_id = db.Column(
-        db.Integer, db.ForeignKey("game.id", ondelete="CASCADE"), nullable=False
+        db.Integer, db.ForeignKey("publisher.id", ondelete="CASCADE"), nullable=False
     )
 
 class Reviews(db.Model):
