@@ -4,7 +4,7 @@ from gamesreviewbeta import db
 class Publisher(db.Model):
     # schema for Publisher model
     id = db.Column(db.Integer, primary_key=True)
-    publisher_name = db.Column(db.String(30), unique=True, nullable=False)
+    publisher_name = db.Column(db.String(30), unique=False, nullable=False)
     game = db.relationship(
         "Game", backref="Publisher", cascade="all, delete", lazy=True
     )
