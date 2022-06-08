@@ -145,6 +145,11 @@ def edit_publisher(publisher_id):
 
 @app.route("/delete_publisher/<int:publisher_id>")
 def delete_publisher(publisher_id):
+
+    if "user" not in session or session["user"] != "admin":
+        flash("You must be admin to delete publishers!")
+        return redirect(url_for("publishers"))
+    
     publisher = Publisher.query.get_or_404(publisher_id)
     db.session.delete(publisher)
     db.session.commit()
