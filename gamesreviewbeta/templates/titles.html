@@ -19,7 +19,6 @@
 </div>
 {%  if publisher| length > 0 %}
 <div class="row">
-  <div>
     {% for p in publisher  %}
     {% for game in game %}
     <div class="col s12 m5 l3 transparent">
@@ -51,5 +50,6 @@
     </div>
     {% endfor %}
     {% endfor %}
+</div>
 {% endif %}
 {% endblock %}
