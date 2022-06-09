@@ -17,8 +17,8 @@
     </a>
   </div>
 </div>
-{%  if publisher| length > 0 %}
 <div class="row">
+  {%  if publisher| length > 0 %}
     {% for p in publisher  %}
     {% for game in game %}
     <div class="col s12 m5 l3 transparent">
@@ -50,6 +50,7 @@
     </div>
     {% endfor %}
     {% endfor %}
+  {% endif %}
 </div>
-{% endif %}
+
 {% endblock %}
