@@ -182,9 +182,7 @@ q {
 }
 @media (max-width: 620px){
   .img-slider .slide img {
-    width:38%;
-    
-   }
+    width: 35%;
 }
 
 /* card image sizes */

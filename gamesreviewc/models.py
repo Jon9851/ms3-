@@ -1,4 +1,4 @@
-from gamesreviewbeta import db
+from gamesreviewc import db
 
 
 class Publisher(db.Model):

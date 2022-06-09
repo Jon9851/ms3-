@@ -59,38 +59,39 @@ Welcome to your guide through History Quiz <a href="https://gamesrevbeta.herokua
 ## User stories
 
  ### First time Vistor Goals 
-1. I want a quiz that provides rules and instructions on how to play the game.
-2. I would like to know where abouts on the page im on.
-3. I want to be able to play the game either on laptop or on my phone. 
+1. As first time user i would like some information one what the site is and what the sites does.
+2. The interface to be easy to use and self-explanatory. 
+3. I want to be able to access the site on my phone and be easy to use while im using smaller devcies.
+4. I would like to know if m was registration sucessful.
 
  ### Returning Vistor Goals   
-1. I would have liked to see the correct answer appear in a different colour so that i knew what the answer was to the question.
-2. The quiz seemed slow on my phone, changing questions wasn`t instant and took a few seconds to switch.
+1. I would like to be able to add and edit my comments that i post online and be able to delete them if i so require.
+2. I have the ability to log out, and am notified when this is successful and i have logged out
+3. I would like have a warning message appear before i delete any information form the site. 
 
  ### Frequent User Goals
-1. I would have like the questions to appear randomised every time I play so I am not answering the same questions every time I play.
-2. I would like to have feedback on the questions i got correct or incorrect, some kind of idenifcation of the correct or incorrect answers would be greatly appreciated.
-
-### User Feedback
-Having reviewed the user goals i have implemented changes to the quiz game. This will satisfy all types of user whether your a first time user or a returning one.
-
-
+1. when a user, logs in would like to know if i have been logged in correclty.
+2. As returing user i want to know that my password is secured and that nobody can access it.
+3. Restrictions on certians on the database so that i can cause my self any issues and have to contact the developer.
 
 
 # Wireframes
-The wireframes for ‘You Matter’ were produced in[Balsamiq](https://balsamiq.com).
-There are frames for a full width display ( 1920 x 1080 )and a small mobile 
+The wireframes for ‘Games Review’ were produced in[Balsamiq](https://balsamiq.com).
+There are frames for a full width display ( 1920 x 1080 package)and a small mobile 
 device (360 x 640). The final site varies slightly from the wireframes due to bugs and design 
-changes during development that occurred during the creation process.
+changes during development that occurred during the creation process. Mobile wireframes havent been included due to the use of Materialize as this
+inculdes integrated responsivness package.
+
  
 
-![Wireframe Desktop](assets/images/historywire.png)
-![Wireframe Mobile](assets/images/mobilequiz.png)
+![Wireframe Desktop](gamesreviewbeta/static/image/frames1.PNG)
+![Wireframe Desktop](gamesreviewbeta/static/image/frames2.PNG)
+![Wireframe Desktop](gamesreviewbeta/static/image/frames3.PNG)
 
 [Contents](<#contents>)
 
 # Design Choices
- When designing the quiz of the world I wanted the quiz game to be simple and educational. The index page contains a brief introduction to the game, with three buttons directly underneath introduction paragraph. 
+ When designing the games reveiw database I wanted it to be to be simple to use, as wanted the CRUD functionality present in the databse . Games review contains 13 pages which 11 pages relate to Crud functions with in the database.   
  
  A feature that I knew I was implementing early on was highlight option so that the user knew exactly where they where on the page and what buttons they were clicking. The quiz itself is a multiple-choice quiz as I knew the some of the question might be a bit difficult. Included in the game is a progress bar and a score counter so that the user can keep an eye on there score while playing the game.
  
