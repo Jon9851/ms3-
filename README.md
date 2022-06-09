@@ -14,12 +14,14 @@ Html, CSS and JavaScript were used to create the front end of the website. For t
 
 My overall goal for this project was to keep the html JavaScript and CSS simple as I wanted to ensure that I added full CRUD functionality to all pages of the database with a flash message and a fully functioning register and login system with a logout capability. 
 
-
-Welcome to your guide through History Quiz <a href="https://gamesrevbeta.herokuapp.com/" target="_blank" rel="noopner">History Quiz</a>
-
+This project certainly tested me during it is development.
 
 
-![Games Review responiveness](assets/images/imr1.png)
+Game review <a href="https://gamesrevbeta.herokuapp.com/" target="_blank" rel="noopner">Game Review</a>
+
+
+
+![Games Review responiveness](gamesreviewc/static/image/responisvems3.PNG)
 
 # Contents
 
@@ -84,18 +86,22 @@ inculdes integrated responsivness package.
 
  
 
-![Wireframe Desktop](gamesreviewbeta/static/image/frames1.PNG)
-![Wireframe Desktop](gamesreviewbeta/static/image/frames2.PNG)
-![Wireframe Desktop](gamesreviewbeta/static/image/frames3.PNG)
+![Wireframe Desktop](gamesreviewc/static/image/frames1.PNG)
+![Wireframe Desktop](gamesreviewc/static/image/frames2.PNG)
+![Wireframe Desktop](gamesreviewc/static/image/frames3.PNG)
 
 [Contents](<#contents>)
 
 # Design Choices
- When designing the games reveiw database I wanted it to be to be simple to use, as wanted the CRUD functionality present in the databse . Games review contains 13 pages which 11 pages relate to Crud functions with in the database.   
+ When designing the games reveiw database I wanted it to be to be simple to use, as wanted the CRUD functionality present in the databse . Games review contains 13 pages which 11 pages relate to Crud functions with in the database. After spending serval hours looking at Materialize i eventually decided on cards, collapsibles and a nav bar with a built side nav bar for the desgin. I wanted the overall look of the side to feel simple and easy to use. All pages are linked up either via url`s or with buttons directing you to the different pages on the site.
+
+ The nav bar covers all 13 pages of the side which is kept on the base template, across all the pages i have put in a background image which gives the site a nice contrasts from the text on the page. Early on in the design I knew i was going to use green for the overall look of the site, I orginally choose blue for the text but due to it being difficult to see and changed the text colour scheme to white which stood out more. 
+
+The game page was designed to give users ideas of games ideas that they can input into the database. All the images on the games page are for educational purposes only.
+The design for the page comes from materialize cards which i edited the background to white and the text to a dark green colour.
+
+During the final stages of devlepoment i choose to lock out users from deleting publishers as this ties all the relational database together. i wnated to give the uses so feed back and warining messages so i choose to implement flash messages.
  
- A feature that I knew I was implementing early on was highlight option so that the user knew exactly where they where on the page and what buttons they were clicking. The quiz itself is a multiple-choice quiz as I knew the some of the question might be a bit difficult. Included in the game is a progress bar and a score counter so that the user can keep an eye on there score while playing the game.
- 
- I hope that the users take away a bit of knowledge form playing the quiz of the world.
 
 ![Hex Color](assets/images/hex1.PNG)
  THe colors that where choosen for the history quiz are displayed in image above.
