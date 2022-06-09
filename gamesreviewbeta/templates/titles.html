@@ -24,7 +24,7 @@
         <div class="card-image s12 m6 13 center-align">
           <img src="{{url_for('static', filename='image/games.png')}}">
           {% for g in game %}
-          <span class="card-title s12 m5 13 white-text">{{ game.game_name }}</span>
+          <span class="card-title s12 m5 13 white-text">{{ g.game_name }}</span>
           {% endfor %}
           {% for p in publisher  %}
           <p class="white-text"><strong>{{ p.publisher_name }}</strong></p>
@@ -35,7 +35,7 @@
         </div>
         <div class="card-action">
           <a href="{{ url_for('add_reviews', game_id=g.id) }}" class="btn yellow accent-4">Review</a>
-          <a href="{{ url_for('edit_game', game_id=g.id) }}" class="btn black">Edit</a>
+          <a href="{{ url_for('edit_game', game_id=gid) }}" class="btn black">Edit</a>
           <a href="#modal-{{ g.id }}" class="btn red modal-trigger">Delete</a>
           <!-- Modal warning messages  -->
           <div id="modal-{{ g.id }}" class="modal">
