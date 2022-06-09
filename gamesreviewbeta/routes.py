@@ -1,9 +1,9 @@
 from flask import flash, render_template, request, redirect, url_for
 from bson.objectid import ObjectId
-from gamesreviewbeta import app, db, mongo
+from gamesreviewalpha import app, db, mongo
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import session, Flask
-from gamesreviewbeta.models import Publisher, Game, Reviews
+from gamesreviewalpha.models import Publisher, Game, Reviews
 from flask_pymongo import PyMongo
 import os
 
