@@ -25,15 +25,16 @@
     <div class="card green darken-2 center-align">
       <div class="card-image s12 m6 13 center-align">
         <img src="{{url_for('static', filename='image/games.png')}}">
-        <span class="card-title s12 m5 13">{{ p.publisher_name }}</span>
-        <p> <strong>{{ game.game_name }}</strong></p>
+        <span class="card-title s12 m5 13 white-text" >{{ game.game_name }}</span>
+        <p><strong>{{ p.publisher_name }}</strong></p>
       </div>
       <div class="card-content white-text">
-        <p>Publishers Name</p>
+        <p>Game Name</p>
       </div>
       <div class="card-action">
-        <a href="{{ url_for('edit_publisher', publisher_id=p.id) }}" class="btn black">Edit</a>
-        <a href="#modal-{{ p.id }}" class="btn red modal-trigger">Delete</a>
+        <a href="{{ url_for('add_reviews', game_id=games.id) }}" class="btn yellow accent-4">Review</a>
+        <a href="{{ url_for('edit_game', game_id=game.id) }}" class="btn black">Edit</a>
+        <a href="#modal-{{ game.id }}" class="btn red modal-trigger">Delete</a>
         <!-- Modal warning messages  -->
         <div id="modal-{{ p.id }}" class="modal">
           <div class="modal-content green darken-2 white-text">
@@ -41,7 +42,7 @@
             <p>This action cannot be undone</p>          
           </div>
           <div class="modal-footer green darken-2">
-            <a href="{{ url_for('delete_publisher', publisher_id=p.id) }}" class="btn-large red col m3 ">Delete</a>
+            <a href="{{ url_for('delete_game', game_id=game.id) }}" class="btn-large red col m3 ">Delete</a>
           </div>
         </div>
        </div>
