@@ -177,7 +177,6 @@ q {
 @media (max-width: 920px){
   .img-slider{
     width: 80%;
-    margin-right: 70%;
   }
 }
 @media (max-width: 620px){
@@ -191,7 +190,6 @@ q {
 @media (max-width: 420px){
   .img-slider{
     width: 100%;
-    margin-left: 10%;
     padding: 50px; 
   }
 }

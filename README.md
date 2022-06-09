@@ -1,108 +1,185 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+**_Games Review_**
 
-Welcome Jon9851,
+WELCOME TO GAMES REVIEW
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Being a gamer my self I wanted to create a website database where user’s have control on the content that can be added to the database. I having played a lot of games I wanted to create something where people can add their honest opinions about games. The website uses a number of different languages and is a combination of POSTGRESSQL and MONGODB.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+So what language and technology’s  did I use for the creation of the database.
 
-## Gitpod Reminders
+PostgreSQL and Mongo dB were used to create the database it is self, with python language used to create the routes for the database. I defiantly found tricky combining both database and the overall creation of the database it is self.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+PostgreSQL part of the database includes the publishers titles and review sections of the database.  The Mongo dB side of the database handles the user’s login and registration which I have included a Werkzeug password hash to help protect users and included defensive programming for users as well. I originally wanted to have the user’s models created inside the PostgreSQL database, but I found creating the routes to difficult as there was no learning materials provided for this, so I decided to user mongo dB instead.
 
-`python3 -m http.server`
+Html, CSS and JavaScript were used to create the front end of the website. For the design of the front end, I used Materialize templates which includes custom CSS and responsiveness for all devices included in the package. All images I have used in the website are all for educational purposes only.
 
-A blue button should appear to click: _Make Public_,
+My overall goal for this project was to keep the html JavaScript and CSS simple as I wanted to ensure that I added full CRUD functionality to all pages of the database with a flash message and a fully functioning register and login system with a logout capability. 
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Welcome to your guide through History Quiz <a href="https://gamesrevbeta.herokuapp.com/" target="_blank" rel="noopner">History Quiz</a>
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![Games Review responiveness](assets/images/imr1.png)
 
-To log into the Heroku toolbelt CLI:
+# Contents
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* [**User Experience UX**](<#user-experience-ux>)
+   * [User Stories](<#user-stories>)
+   * [**Wireframes**](<#wireframes>)
+   * [**Design Choices**](<#design-choices>)
+       * [Color Scheme](<#color-scheme>)
+   * [**Features**](<#features>)
+       * [Home](<#Home>)
+       * [Insturctions](<#Instructions>)
+       * [Game](<#Game>)
+       * [Score](<#Score>)
+       * [Buttons](<#Buttons>)
+* [**Future Features**](<#future-features>)
+* [**Technologies Used**](<#Technologies-Used>)
+* [**Testing**](<#testing>)
+* [**Deployment**](<#deployment>)
+* [**Credits**](<#credits>)
+* [**Content**](<#content>)
+* [**Future Features**](<Future-Features>)
+* [**Acknowledgements**](<#acknowledgements>)                
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+# User Experience (UX)
 
-------
+## User stories
 
-## Release History
+ ### First time Vistor Goals 
+1. I want a quiz that provides rules and instructions on how to play the game.
+2. I would like to know where abouts on the page im on.
+3. I want to be able to play the game either on laptop or on my phone. 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+ ### Returning Vistor Goals   
+1. I would have liked to see the correct answer appear in a different colour so that i knew what the answer was to the question.
+2. The quiz seemed slow on my phone, changing questions wasn`t instant and took a few seconds to switch.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+ ### Frequent User Goals
+1. I would have like the questions to appear randomised every time I play so I am not answering the same questions every time I play.
+2. I would like to have feedback on the questions i got correct or incorrect, some kind of idenifcation of the correct or incorrect answers would be greatly appreciated.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### User Feedback
+Having reviewed the user goals i have implemented changes to the quiz game. This will satisfy all types of user whether your a first time user or a returning one.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+# Wireframes
+The wireframes for ‘You Matter’ were produced in[Balsamiq](https://balsamiq.com).
+There are frames for a full width display ( 1920 x 1080 )and a small mobile 
+device (360 x 640). The final site varies slightly from the wireframes due to bugs and design 
+changes during development that occurred during the creation process.
+ 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+![Wireframe Desktop](assets/images/historywire.png)
+![Wireframe Mobile](assets/images/mobilequiz.png)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+[Contents](<#contents>)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+# Design Choices
+ When designing the quiz of the world I wanted the quiz game to be simple and educational. The index page contains a brief introduction to the game, with three buttons directly underneath introduction paragraph. 
+ 
+ A feature that I knew I was implementing early on was highlight option so that the user knew exactly where they where on the page and what buttons they were clicking. The quiz itself is a multiple-choice quiz as I knew the some of the question might be a bit difficult. Included in the game is a progress bar and a score counter so that the user can keep an eye on there score while playing the game.
+ 
+ I hope that the users take away a bit of knowledge form playing the quiz of the world.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+![Hex Color](assets/images/hex1.PNG)
+ THe colors that where choosen for the history quiz are displayed in image above.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+ Red Copper with a hex code of #9e2c0b was used for text, backgorund and hoover effects.(Red- Copper colour)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+ White smoke with a hex code of #f6f6f6 was used text, backgorund and hoover effects.(White Smoke)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+  
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+[Contents](<#contents>)
 
-------
+# Features
+### Home
+The quiz of the world is a simple quiz game that contains 3 buttons on the home page. Each button will take user to three different pages. The buttons will be highlighted once the user clicked on them, this so that the user and keep track of which page they are on.
 
-## FAQ about the uptime script
+![Home](assets/images/home1.PNG)
 
-**Why have you added this script?**
+### Instructions
+The instructions page contains a summary of the games rules as well as button to return home.
+![Instructions](assets/images/ins.PNG)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### Game
+The game contains multiple different features which are designed to help the user while playing the quiz of the world.
 
-**How will this affect me?**
+1.	Located on the top left is a question counter to help the user keep track of what question they are up too.
+2.	Below the question counter is a progress bar which fills up as the user progress through the quiz.
+3.	Located on the top right is a score counter which will help the user keep track of the scores. 
+4.	THe questions are displayed below the progress bar and change at random once a question has been answered.
+5.	The quiz it is self is a multiple-choice quiz with four possible answers with 17 questions in total.
+6.	Each option will change colour once selected. 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+![Game](assets/images/test1.png)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### Score
+The score page has a line of text and a name box as well as two buttons which will either restart the quiz or take the user back to the home page. 
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![Game](assets/images/score1.PNG)
 
-**So….?**
+[Contents](<#contents>)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+## Deployment
 
-**Can I opt out?**
+  ### **Deployment**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+  The site was deployed using GitHub. THe following step will depoly You matter site.
+  1. on the github repository, naviagte to **Settings** tab.
+  2. Once on setting page, naviagte to **Pages** on the left hand side of the screen second from the bottom.
+  3. Under **Source**, select the branch to **main**, then click **save**.
+  4.  once you have selected the main branch, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+ 
+ ![GitHub pages for deployment](assets/images/github.jpg)
+ 
+ # Technologies Used
+   
+* [HTML5](https://html.spec.whatwg.org/) -Used to create the contents and structure for the website.
+* [CSS](https://www.w3.org/Style/CSS/Overview.en.html) -Used to create the styling.
+* [Balsamiq](https://balsamiq.com/wireframes/) - Used to create the wireframes.
+* [Gitpod](https://www.gitpod.io/#get-started) - Used to deploy the website.
+* [Github](https://github.com/) - Used to host and edit the website code.
+* [Code Beautify](https://codebeautify.org/jsvalidate) - To test and run the code
+* [W3 Schools](https://validator.w3.org/)- To test the html and css code.
+* [JavaScript (ES6)](https://open-vsx.gitpod.io/vscode/item?itemName=xabikos.JavaScriptSnippets)
+* [ami responsive design](http://ami.responsivedesign.is) - To test out responsiness all devices
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+[Contents](<#contents>)
 
-**Anything more?**
+# Testing
+ Please refer to [**_here_**](TESTING.md) for more information on testing 'Quiz Of The World'.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+The live link will take you directly to **History Quiz** repository - https://github.com/Jon9851/History-Quiz
+  
+  # Clone  Repository
+   To Clone a repository use the following steps to guide you throught it.
+   1. Under the repository’s name, click on the code tab.
+   2. click on the clipboard icon to copy the given URL.
+   3. In your IDE of choice, open Git Bash.
+   4. Change the current working directory to the location where you want the cloned directory to be made.
+   5. Type git clone, and then paste the URL copied from GitHub.
+   6. Press enter and the local clone will be created.
 
----
+   ![clone Image ](assets/images/clone.png)
 
-Happy coding!
+
+
+[Contents](<#contents>)
+
+### Credits
+1. W3schools- I used their tutorials on HTML and CSS for further understanding and troubleshooting  throughout my project.
+2. Stack Overflow- I used Stack Overflow to get a more in depth understanding on HTML and CSS throughout my project.
+3. Code Institute Example of the READ.MD- I used these as template when planning and writing my README file.
+4.Code Institute tutors that helped me during my project.
+
+[Contents](<#contents>)
+
+# Acknowledgements
+ 
+ The site was cerated for my milestone project 1 for the [Code Institute](https://codeinstitute.net/) Full Stack Software Developer diploma. I would like to thank all the tutors at the code institute for their help during the development of my first milestone project. I would aslo like to thank [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for his guidence and help as his feedback was extremely key in completing my first milestone project.
+ Brain Codex for help during the creation process. [Brian Codex](https://github.com/briancodex/quiz-app-js)
