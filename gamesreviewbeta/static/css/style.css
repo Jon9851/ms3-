@@ -175,12 +175,12 @@ q {
 
 /* image slider resonpsiveness */
 @media (max-width: 920px){
-  .img-slider{
+  .img-slider .slide img{
     width: 80%;
   }
 }
 @media (max-width: 620px){
-  .img-slider {
+  .img-slider .slide img {
     width: 425px;
     height: 250px;
     padding: 0%;
@@ -188,7 +188,7 @@ q {
    }
 }
 @media (max-width: 420px){
-  .img-slider{
+  .img-slider .slide img{
     width: 100%;
     padding: 50px; 
   }
