@@ -177,12 +177,13 @@ q {
 @media (max-width: 920px){
   .img-slider .slide img{
     width: 80%;
+    margin: auto;
   }
 }
 @media (max-width: 620px){
   .img-slider .slide img {
-    width:42%;
-    margin: 0%;
+    width:38%;
+    
    }
 }
 
