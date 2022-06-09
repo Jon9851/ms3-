@@ -19,8 +19,8 @@
 </div>
 {% for p in publisher  %}
   {%  if publisher| length > 0 %}
-    <ul class="collapsible">
       {% for game in games %}
+      <ul class="collapsible">
         <li>
           <div class="collapsible-header green darken-2 white-text">
             <i class="fa-solid fa-gamepad-modern"></i>
@@ -44,9 +44,10 @@
                       </div>
                       </div>
                     </div>
-                  </li>
-      {% endfor %}
+        </li>
+      
     </ul>
+    {% endfor %}
  {% endif %}
 {% endfor %}
 {% endblock %}
