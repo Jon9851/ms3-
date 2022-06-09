@@ -181,7 +181,8 @@ q {
 }
 @media (max-width: 620px){
   .img-slider .slide img {
-    width:70%;
+    width:42%;
+    margin: 0%;
    }
 }
 
