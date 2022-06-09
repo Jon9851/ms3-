@@ -108,7 +108,7 @@ def games():
 @app.route("/titles")
 def titles():
     game = list(Game.query.order_by(Game.id).all())
-    publisher = list(Game.query.order_by(Game.id).all())
+    publisher = list(Publisher.query.order_by(Publisher.id).all())
     return render_template("titles.html", game=game, publisher=publisher)
 
 
