@@ -167,7 +167,7 @@ q {
 .img-slider .slide img{
   z-index: 1;
   width: 100%;
-  margin-left: 13%;
+  margin-left: 14%;
   padding: 15px;
   border-radius: 50px;
   opacity: 0.8;
@@ -181,13 +181,8 @@ q {
 }
 @media (max-width: 620px){
   .img-slider .slide img {
-    width:60%;
+    width:70%;
    }
-}
-@media (max-width: 420px){
-  .img-slider .slide img{
-    width: 40%;
-  }
 }
 
 /* card image sizes */
