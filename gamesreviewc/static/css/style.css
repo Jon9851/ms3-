@@ -6,13 +6,9 @@
   
   body{
       background-image :  url("https://i.postimg.cc/5y4vjWM3/gameover.jpg");
-      display: flex;
-      min-height: 100vh;
-      flex-direction: column;
+      
   }
-  main {
-    flex: 1 0 auto;
-  }
+
 /* Slideshow container */
 .slideshow-container {
   position: relative;
@@ -199,7 +195,7 @@ q {
   font-size: 15px;
 }
 /* footer style  */
-body {
+footer {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
