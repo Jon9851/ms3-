@@ -19,14 +19,18 @@
 </div>
 <div class="row">
   {%  if publisher| length > 0 %}
-    {% for p in publisher  %}
-    {% for game in game %}
+    
+    
     <div class="col s12 m5 l3 transparent">
       <div class="card green darken-2 center-align">
         <div class="card-image s12 m6 13 center-align">
           <img src="{{url_for('static', filename='image/games.png')}}">
+          {% for game in game %}
           <span class="card-title s12 m5 13 white-text">{{ game.game_name }}</span>
+          {% endfor %}
+          {% for p in publisher  %}
           <p class="white-text"><strong>{{ p.publisher_name }}</strong></p>
+          {% endfor %}
         </div>
         <div class="card-content white-text">
           <p>Game Name</p>
@@ -48,9 +52,6 @@
         </div>
       </div>
     </div>
-    {% endfor %}
-    {% endfor %}
   {% endif %}
 </div>
-
 {% endblock %}
