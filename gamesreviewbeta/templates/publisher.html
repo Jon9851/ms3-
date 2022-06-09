@@ -20,12 +20,12 @@
 </div>
 <div class="row">
   <div></div>
-  {% for publisher in publisher  %}
+  {% for p in publisher  %}
   <div class="col s12 m5 l3 transparent">
     <div class="card green darken-2 center-align">
       <div class="card-image s12 m6 13 center-align">
         <img src="{{url_for('static', filename='image/games.png')}}">
-        <span class="card-title s12 m5 13">{{ publisher.publisher_name }}</span>
+        <span class="card-title s12 m5 13">{{ p.publisher_name }}</span>
       </div>
       <div class="card-content white-text">
         <p>Publishers Name</p>
