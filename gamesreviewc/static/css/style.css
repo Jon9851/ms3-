@@ -183,6 +183,7 @@ q {
 @media (max-width: 620px){
   .img-slider .slide img {
     width: 35%;
+ }
 }
 
 /* card image sizes */
@@ -195,7 +196,7 @@ q {
   font-size: 15px;
 }
 /* footer style  */
-footer {
+body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
