@@ -24,15 +24,14 @@
    {% for game in game %}
    <li>
       <div class="collapsible-header green darken-2 white-text">
-         <i class="fas fa-caret-down"></i>
          <strong>{{ p.publisher_name }}</strong> 
       </div>
-      <div class="collapsible-body">
+      <div class="collapsible-body white green-text darken-2">
          <strong>{{ game.game_name }}</strong>
          <div>
           <a href="{{ url_for('add_reviews', game_id=game.id) }}" class="btn yellow accent-4">Review</a>
           <a href="{{ url_for('edit_game', game_id=game.id) }}" class="btn black">Edit</a>
-          
+          <a href="#modal-{{ game.id }}" class="btn red modal-trigger">Delete</a>
             <!-- Modal for delete warning message -->
             <div id="modal-{{ game.id }}" class="modal">
                <div class="modal-content">
