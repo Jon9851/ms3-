@@ -17,40 +17,41 @@
     </a>
   </div>
 </div>
+{%  if publisher| length > 0 %}
 <div class="row">
   <div>
-  {% for p in publisher  %}
-  {% for game in game %}
-  <div class="col s12 m5 l3 transparent">
-    <div class="card green darken-2 center-align">
-      <div class="card-image s12 m6 13 center-align">
-        <img src="{{url_for('static', filename='image/games.png')}}">
-        <span class="card-title s12 m5 13 white-text" >{{ game.game_name }}</span>
-        <p><strong>{{ p.publisher_name }}</strong></p>
-      </div>
-      <div class="card-content white-text">
-        <p>Game Name</p>
-      </div>
-      <div class="card-action">
-        <a href="{{ url_for('add_reviews', game_id=game.id) }}" class="btn yellow accent-4">Review</a>
-        <a href="{{ url_for('edit_game', game_id=game.id) }}" class="btn black">Edit</a>
-        <a href="#modal-{{ game.id }}" class="btn red modal-trigger">Delete</a>
-        <!-- Modal warning messages  -->
-        <div id="modal-{{ p.id }}" class="modal">
-          <div class="modal-content green darken-2 white-text">
-            <h4>Are you sure you want to delete this Publisher?</h4>
-            <p>This action cannot be undone</p>          
-          </div>
-          <div class="modal-footer green darken-2">
-            <a href="{{ url_for('delete_game', game_id=game.id) }}" class="btn-large red col m3 ">Delete</a>
+    {% for p in publisher  %}
+    {% for game in game %}
+    <div class="col s12 m5 l3 transparent">
+      <div class="card green darken-2 center-align">
+        <div class="card-image s12 m6 13 center-align">
+          <img src="{{url_for('static', filename='image/games.png')}}">
+          <span class="card-title s12 m5 13 white-text">{{ game.game_name }}</span>
+          <p class="white-text"><strong>{{ p.publisher_name }}</strong></p>
+        </div>
+        <div class="card-content white-text">
+          <p>Game Name</p>
+        </div>
+        <div class="card-action">
+          <a href="{{ url_for('add_reviews', game_id=game.id) }}" class="btn yellow accent-4">Review</a>
+          <a href="{{ url_for('edit_game', game_id=game.id) }}" class="btn black">Edit</a>
+          <a href="#modal-{{ game.id }}" class="btn red modal-trigger">Delete</a>
+          <!-- Modal warning messages  -->
+          <div id="modal-{{ p.id }}" class="modal">
+            <div class="modal-content green darken-2 white-text">
+              <h4>Are you sure you want to delete this Publisher?</h4>
+              <p>This action cannot be undone</p>
+            </div>
+            <div class="modal-footer green darken-2">
+              <a href="{{ url_for('delete_game', game_id=game.id) }}" class="btn-large red col m3 ">Delete</a>
+            </div>
           </div>
         </div>
-       </div>
-     </div>
-   </div>
-
-
-
-{% endfor %}
-{% endfor %}
+      </div>
+      {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
 {% endblock %}
