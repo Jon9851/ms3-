@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<h3 class="hide"> Reviews </h3> 
+<h3 class="hide"> Reviews </h3>
 <div class="row">
   <div class="s1 m2">
     <div class="card transparent">
@@ -12,16 +12,18 @@
 </div>
 <div class="row col s12 m3 l6">
   <div class="col s12 center-align">
-    <a href="{{ url_for('add_reviews') }}" class="btn-large green darken-2"> Add Reviews <i class="fas fa-plus-square right"></i>
+    <a href="{{ url_for('add_reviews') }}" class="btn-large green darken-2"> Add Reviews <i
+        class="fas fa-plus-square right"></i>
     </a>
   </div>
 </div>
+{% if game|length > 0 %}
 <ul class="collapsible">
-   {% for review in reviews %} 
-    <li>
+  {% for game in game %}
+  {% for review in reviews %}
+  <li>
     <div class="collapsible-header green white-text">
-      <i class="fa-solid fa-gamepad-modern"></i>
-      <strong></strong> 
+      <strong>{{ game.game_name }}</strong>
     </div>
     <div class="collapsible-body white green-text">
       <p>{{ review.game_review }}</p>
@@ -40,10 +42,11 @@
             <a href="{{ url_for('delete_reviews', reviews_id=review.id) }}" class="btn-large red">Delete</a>
           </div>
         </div>
-      </div> 
+      </div>
     </div>
   </li>
-  {% endfor %} 
-</ul> 
+  {% endfor %}
+  {% endfor %}
+</ul>
+{% endif %}
 {% endblock %}
-
