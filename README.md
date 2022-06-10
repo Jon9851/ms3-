@@ -2,22 +2,22 @@
 
 WELCOME TO GAMES REVIEW
 
-Being a gamer my self I wanted to create a website database where user’s have control on the content that can be added to the database. I having played a lot of games I wanted to create something where people can add their honest opinions about games. The website uses a number of different languages and is a combination of POSTGRESSQL and MONGODB.
+Being a gamer my self I wanted to create a website database where user’s have control on the content that can be added to the database. Having played a lot of games I wanted to create something where people can add their honest opinions about games. The website uses a number of different languages and is a combination of POSTGRESSQL and MONGODB.
 
 So what language and technology’s  did I use for the creation of the database.
 
-PostgreSQL and Mongo dB were used to create the database it is self, with python language used to create the routes for the database. I defiantly found tricky combining both database and the overall creation of the database it is self.
+PostgreSQL and Mongo dB were used to create the database it is self, with python language used to create the routes for the database. I defiantly found tricky combining both database and the overall creation of the database.
 
 PostgreSQL part of the database includes the publishers titles and review sections of the database.  The Mongo dB side of the database handles the user’s login and registration which I have included a Werkzeug password hash to help protect users and included defensive programming for users as well. I originally wanted to have the user’s models created inside the PostgreSQL database, but I found creating the routes to difficult as there was no learning materials provided for this, so I decided to user mongo dB instead.
 
 Html, CSS and JavaScript were used to create the front end of the website. For the design of the front end, I used Materialize templates which includes custom CSS and responsiveness for all devices included in the package. All images I have used in the website are all for educational purposes only.
 
-My overall goal for this project was to keep the html JavaScript and CSS simple as I wanted to ensure that I added full CRUD functionality to all pages of the database with a flash message and a fully functioning register and login system with a logout capability. 
+My overall goal for this project was to keep the html JavaScript and CSS simple as I wanted to ensure that I added full CRUD functionality to all pages of the database with flash messages and a fully functioning register and login system with a logout capability. 
 
 This project certainly tested me during it is development.
 
 
-Game review <a href="https://gamesrevbeta.herokuapp.com/" target="_blank" rel="noopner">Game Review</a>
+Game review <a href="https://gamesreviewc.herokuapp.com//" target="_blank" rel="noopner">Game Review</a>
 
 
 
@@ -93,14 +93,14 @@ inculdes integrated responsivness package.
 [Contents](<#contents>)
 
 # Design Choices
- When designing the games reveiw database I wanted it to be to be simple to use, as wanted the CRUD functionality present in the databse . Games review contains 13 pages which 11 pages relate to Crud functions with in the database. After spending serval hours looking at Materialize i eventually decided on cards, collapsibles and a nav bar with a built side nav bar for the desgin. I wanted the overall look of the side to feel simple and easy to use. All pages are linked up either via url`s or with buttons directing you to the different pages on the site.
+ When designing the games reveiw database I wanted it to be to be simple to use, as I wanted the CRUD functionality to be present in the databse . Games review contains 13 pages which 11 pages related to Crud functions with in the database. After spending serval hours looking at Materialize i eventually decided on cards, collapsibles and a nav bar with a built in side nav bar for the desgin. I wanted the overall look of the side to feel simple and easy to use. All pages are linked up with either url`s or with buttons directing you to the different pages on the site.
 
- The nav bar covers all 13 pages of the side which is kept on the base template, across all the pages i have put in a background image which gives the site a nice contrasts from the text on the page. Early on in the design I knew i was going to use green for the overall look of the site, I orginally choose blue for the text but due to it being difficult to see and changed the text colour scheme to white which stood out more. 
+ The nav bar covers all 13 pages of the site which is kept on the base template, across all the pages i have put in a background image which gives the site a nice contrasts from the text on the page. Early on in the design I knew i was going to use green for the overall look of the site, I orginally choose blue for the text, but due to it being difficult to see I changed the text colour scheme to white which stood out more. 
 
 The game page was designed to give users ideas of games ideas that they can input into the database. All the images on the games page are for educational purposes only.
 The design for the page comes from materialize cards which i edited the background to white and the text to a dark green colour.
 
-During the final stages of devlepoment i choose to lock out users from deleting publishers as this ties all the relational database together. i wnated to give the uses so feed back and warining messages so i choose to implement flash messages.
+During the final stages of devlepoment I choose to lock out users from deleting publishers as this ties all the relational database together. I wnated to give the uses so feed back and warining messages so i choose to implement flash messages.
  
 
 ![Hex Color](assets/images/hex1.PNG)
