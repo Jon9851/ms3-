@@ -26,22 +26,22 @@
   {% endfor %}
   <li class="collection-item avatar green darken-2">
       <span class="title">Review</span>
-    <img src="{{url_for('static', filename='image/reveiw.png')}}" alt="" class="circle">
+    <img src="{{url_for('static', filename='image/reveiw.png')}}" alt="game" class="circle" aria-label="game controller">
     <input id="game_reivew" name="game_review" minlength="20" maxlength="250" type="text" class="validate">
     <label for="game_review">Game Review</label>
   </li>
 <div class="input-field col s12 white-text">
   <li class="collection-item avatar green darken-2">
       <span class="title">Game Rating</span>
-    <img src="{{url_for('static', filename='image/rating.png')}}" alt="" class="circle">
-    <input id="game_rating" name="game_rating" minlength="1" maxlength="10" type="text" class="validate">
+    <img src="{{url_for('static', filename='image/rating.png')}}" alt="rating" class="circle" aria-label="rating">
+    <input id="game_rating" name="game_rating" minlength="1" maxlength="250" type="text" class="validate">
     <label for="game_rating">Game Rating</label>
   </li>
 </div>
 <div class="input-field col s12 white-text">
   <li class="collection-item avatar green darken-2">
       <span class="title">Game Genre</span>
-    <img src="{{url_for('static', filename='image/genre.png')}}" alt="" class="circle">
+    <img src="{{url_for('static', filename='image/genre.png')}}" alt="genre" class="circle" aria-label="game genre">
     <input id="game_genre" name="game_genre" minlength="3" maxlength="20" type="text" class="validate">
     <label for="game_genre">Game Genre</label>
   </li>

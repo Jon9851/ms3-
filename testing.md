@@ -54,9 +54,14 @@ During the testing of the sides code i came several warning error when running m
 ![Warning Errors ](gamesreviewc/static/image/warnings.PNG)
 
 # PEP8 Testing 
-No issues found 
+No issues found Materialize all code works.
 
-![Testing on W3C Html](gamesreviewc/static/image/pep8.PNG)
+![Testing on PEP8 Html](gamesreviewc/static/image/jstest.PNG)
+
+# PEP8 Testing 
+Some issues due using materlize 
+
+![Testing on Js Hint Html](gamesreviewc/static/image/pep8.PNG)
 
 # Bulid vs Pre Deployment 
 | Test                                                            | Result                                                                    | Issue                         | Pass |
