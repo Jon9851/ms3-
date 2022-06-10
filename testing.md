@@ -137,3 +137,5 @@ page you are on the site. I have attempted  to fix this but all i did was break 
 ![Testing on Lighthouse Reports ](gamesreviewc/static/image/light1.PNG)
 
 ![Testing on Lighthouse Reports ](gamesreviewc/static/image/light2.PNG)
+
+![Testing on Lighthouse Reports ](gamesreviewc/static/image/proof.PNG)
