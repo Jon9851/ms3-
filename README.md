@@ -53,7 +53,7 @@ Game review <a href="https://gamesreviewc.herokuapp.com//" target="_blank" rel="
  ### First time Vistor Goals 
 1. As first time user i would like some information one what the site is and what the sites does.
 2. The interface to be easy to use and self-explanatory. 
-3. I want to be able to access the site on my phone and be easy to use while im using smaller devcies.
+3. I want to be able to access the site on my phone and be easy to use while im using smaller devices.
 4. I would like to know if m was registration sucessful.
 
  ### Returning Vistor Goals   
@@ -128,7 +128,7 @@ buttons but only admin can delete publishers.The publishers page also provides l
 
 
 ### Titles
-The titles pages is where you can add games to the site, the titles page features collapsibles with the publisher names on the drop and in the drop down there is review, edit and delete buttons to give the user full access. The buttons provides links to the review page and edit games page. Users can delete games as they wish with a flash message appearing to warn them about deleting the games.
+The titles pages is where you can add games to the site, the titles page features collapsible with the publisher names on the drop and in the drop down there is review, edit and delete buttons to give the user full access. The buttons provides links to the review page and edit games page. Users can delete games as they wish with a flash message appearing to warn them about deleting the games.
 
 ![Titles](gamesreviewc/static/image/titlesgr.PNG)
 
@@ -189,8 +189,6 @@ the login and register page are very Similar the only differences are the text o
 
 # Testing
  Please refer to [**_here_**](TESTING.md) for more information on testing 'Quiz Of The World'.
-
-The live link will take you directly to **History Quiz** repository - https://github.com/Jon9851/History-Quiz
   
   # Clone  Repository
    To Clone a repository use the following steps to guide you throught it.
