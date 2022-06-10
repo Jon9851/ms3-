@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 <h3 class="hide"> Reviews </h3>
-<p class="welcome"> Welcome to Games Review, this review site give the users full control. Want to add a game you can, Want to add a review you can so why not pick a game and leave a reivew today! </p>
+<p class="welcome"> Welcome to Games Review, this review site give the users full control. Want to add a game you can,
+  Want to add a review you can so why not pick a game and leave a reivew today! </p>
 
 <div class="slideshow-container">
 
@@ -11,12 +12,13 @@
   </div>
 
   <div class="mySlides">
-    <q> “I used to be an adventurer like you, then I took an arrow to the knee.”</q> </q>
+    <q> “I used to be an adventurer like you, then I took an arrow to the knee.”</q>
     <p class="author"> Whiterun Guard</p>
   </div>
 
   <div class="mySlides">
-    <q>" Close your heart to their desperation, close your heart to their suffering, do not allow yourself to feel for them, they will not feel for you"</q>
+    <q>" Close your heart to their desperation, close your heart to their suffering, do not allow yourself to feel for
+      them, they will not feel for you"</q>
     <p class="author"> Kratos</p>
   </div>
 
@@ -29,22 +31,21 @@
   <span class="dot" onclick="currentSlide1(1)"></span>
   <span class="dot" onclick="currentSlide1(2)"></span>
   <span class="dot" onclick="currentSlide1(3)"></span>
-   </div>
 </div>
-  <div class="img-slider">
-    <div class="slide active">
-      <img src="{{url_for('static', filename='image/rdr2.png')}}" alt="1" aria-label="red dead 2">
-    </div>
-    <div class="slide">
-      <img src="{{url_for('static', filename='image/codw.png')}}" alt="2" aria-label="warzone">>
-    </div>
-    <div class="slide">
-      <img src="{{url_for('static', filename='image/skyrim.png')}}" alt="3" aria-label="skyrim">>
-    </div>
-    <div class="slide">
-      <img src="{{url_for('static', filename='image/kartos.png')}}" alt="4" aria-label="GOW">
-      </div>
-  
+<div class="img-slider">
+  <div class="slide active">
+    <img src="{{url_for('static', filename='image/rdr2.png')}}" alt="1" aria-label="red dead 2">
+  </div>
+  <div class="slide">
+    <img src="{{url_for('static', filename='image/codw.png')}}" alt="2" aria-label="warzone">
+  </div>
+  <div class="slide">
+    <img src="{{url_for('static', filename='image/skyrim.png')}}" alt="3" aria-label="skyrim">
+  </div>
+  <div class="slide">
+    <img src="{{url_for('static', filename='image/kartos.png')}}" alt="4" aria-label="GOW">
+  </div>
+</div>
 
 
 {% endblock %}

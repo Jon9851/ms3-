@@ -1,101 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta
-    name="description"
-    content="Games Review app,add,edit,delete publishers, games,reviews from the databses and assign"/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description"
+    content="Games Review app,add,edit,delete publishers, games,reviews from the databses and assign" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cookie&family=Righteous&display=swap">
-    <script src="https://kit.fontawesome.com/8f8d6e0652.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cookie&family=Righteous&display=swap">
+  <script src="https://kit.fontawesome.com/8f8d6e0652.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
 
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ url_for('static', filename='favicon/site.webmanifest') }}">
-   
- 
-    <title>Home</title>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ url_for('static', filename='favicon/site.webmanifest') }}">
+
+
+  <title>Home</title>
 </head>
+
 <body>
   <header>
- 
-  <nav>
-    <div class="nav-wrapper green darken-2">
-      <a href="#!" class="brand-logo">Games Review</a>
-      <a href="#!" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="{{ url_for('index') }}">Home</a></li>
-      {% if session.user %}
-         <li><a href="{{ url_for('games') }}">Games</a></li>
-         <li><a href="{{ url_for('publisher') }}">Publishers</a></li>
-         <li><a href="{{ url_for('titles') }}">Titles</a></li>
-         <li><a href="{{ url_for('reviews') }}">Reveiws</a></li>
-         <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-         <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-      {% else %}
-         <li><a href="{{ url_for('login') }}">Login</a></li>
-         <li><a href="{{ url_for('register') }}">Register</a></li>
-      {% endif %}  
-        
-        
+
+    <nav>
+      <div class="nav-wrapper green darken-2">
+        <a href="#!" class="brand-logo">Games Review</a>
+        <a href="#!" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          {% if session.user %}
+          <li><a href="{{ url_for('games') }}">Games</a></li>
+          <li><a href="{{ url_for('publisher') }}">Publishers</a></li>
+          <li><a href="{{ url_for('titles') }}">Titles</a></li>
+          <li><a href="{{ url_for('reviews') }}">Reveiws</a></li>
+          <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+          <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+          {% else %}
+          <li><a href="{{ url_for('login') }}">Login</a></li>
+          <li><a href="{{ url_for('register') }}">Register</a></li>
+          {% endif %}
+
         </ul>
 
-  <ul class="sidenav green draken-2" id="mobile-demo" class="sidenav-bars">
-    <li><a href="{{ url_for('index') }}">Home</a></li>
-    {% if session.user %}
-    <li><a href="{{ url_for('games') }}">Games</a></li>
-    <li><a href="{{ url_for('publisher') }}">Publishers</a></li>
-    <li><a href="{{ url_for('titles') }}">Titles</a></li>
-    <li><a href="{{ url_for('reviews') }}">Reveiws</a></li>
-    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
- {% else %}
-    <li><a href="{{ url_for('login') }}">Login</a></li>
-    <li><a href="{{ url_for('register') }}">Register</a></li>
- {% endif %}  
-   
-    </ul>
-   </nav>
+        <ul class="sidenav green draken-2" id="mobile-demo" class="sidenav-bars">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          {% if session.user %}
+          <li><a href="{{ url_for('games') }}">Games</a></li>
+          <li><a href="{{ url_for('publisher') }}">Publishers</a></li>
+          <li><a href="{{ url_for('titles') }}">Titles</a></li>
+          <li><a href="{{ url_for('reviews') }}">Reveiws</a></li>
+          <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+          <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+          {% else %}
+          <li><a href="{{ url_for('login') }}">Login</a></li>
+          <li><a href="{{ url_for('register') }}">Register</a></li>
+          {% endif %}
 
-  </div>
+        </ul>
+      </div>
+    </nav>
 
-</header>
-<section>
+    </div>
+
+  </header>
   <!-- flash messages -->
   {% with messages = get_flashed_messages() %}
   {% if messages %}
-      {% for message in messages %}
-          <div class="row flashes">
-              <h5 class="green draken-2 white-text center-align">{{ message }}</h5>
-          </div>
-      {% endfor %}
+  {% for message in messages %}
+  <div class="row flashes">
+    <h5 class="green draken-2 white-text center-align">{{ message }}</h5>
+  </div>
+  {% endfor %}
   {% endif %}
-{% endwith %}
+  {% endwith %}
 
 
-</section>
+  </section>
 
-<main class="container">
+  <main class="container">
     {% block content %}
     {% endblock %}
-</main>
-<footer>
+  </main>
     <footer class="page-footer green darken-2">
       <div class="footer-copyright">
-          <div class="container">
-             All images used in this site are for educational purposes only.
-              <a class="blue-text text-darken-4 right" href="https://codeinstitute.net" target="_blank">&copy; Code Institute</a>
-          </div>
+        <div class="container">
+          All images used in this site are for educational purposes only.
+          <a class="blue-text text-darken-4 right" href="https://codeinstitute.net" target="_blank">&copy; Code
+            Institute</a>
+        </div>
       </div>
-</footer>
- 
+    </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{url_for('static', filename='js/script.js')}}"></script>
 </body>
+
 </html>

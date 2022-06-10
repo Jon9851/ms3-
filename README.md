@@ -217,5 +217,5 @@ The live link will take you directly to **History Quiz** repository - https://gi
 
 # Acknowledgements
  
- The site was cerated for my milestone project 1 for the [Code Institute](https://codeinstitute.net/) Full Stack Software Developer diploma. I would like to thank all the tutors at the code institute for their help during the development of my first milestone project. I would aslo like to thank [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for his guidence and help as his feedback was extremely key in completing my first milestone project.
- Brain Codex for help during the creation process. [Brian Codex](https://github.com/briancodex/quiz-app-js)
+ The site was cerated for my milestone project 3 for the [Code Institute](https://codeinstitute.net/) Full Stack Software Developer diploma. I would like to thank all the tutors at the code institute for their help during the development of my first milestone project. I would aslo like to thank [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for his guidence and help as his feedback was extremely key in completing my thrid milestone project.
+ Brain Codex for help during the creation process. [@kenan_ci] from the code institute for guidance and reassurance during the creation of this porject 
