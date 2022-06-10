@@ -51,7 +51,7 @@ W3C markup validator and W3C CSS validator were used to test and vailidate all t
 # Errors 
 During the testing of the sides code i came several warning error when running my code throught w3 validator or javascript warning error. These error cant be removed as these are due to block contents being carried over from the html page or from Materialize. I have tired taking these error out but it breaks the code. For example the duplicate error on the html validation for the sidenav-bar. I have removed the duplicate attribute and the side navbar stopped workingso i had to put the line of code back in.
 
-[Warning Errors ](gamesreviewc/static/image/warnings.PNG)
+![Warning Errors ](gamesreviewc/static/image/warnings.PNG)
 
 # PEP8 Testing 
 No issues found 
@@ -94,6 +94,27 @@ No issues found
 | Restrictions on the database           | Admin functions work correctly      | PAss |
 | Edit and delete buttons work           | Buttons work fine                   | Pass |
 | Warning messages appear                | Messages appear                     | Pass |
+
+### Responsivness Testing 
+| Responsiveness Test                           | Result                                                                    | Pass |
+|-----------------------------------------------|---------------------------------------------------------------------------|------|
+| Sidenav-bar appears on smaller devices        | Works correctly                                                           | Pass |
+| Games Page cards resize on different devices  | Works correctly                                                           | Pass |
+| Image slider displays in the centre           | Image slider appears in different locations depending on the device size  | Fail |
+| Titles page                                   | Works correctly                                                           | Pass |
+| Add Games Page                                | Works Correctly                                                           | Pass |
+| Delete, edit and review buttons               | Works Correctly                                                           | Pass |
+| Edit games page                               | Works Correctly                                                           | Pass |
+| Publishers page                               | Works correctly                                                           | Pass |
+| Edit publishers page                          | Works Correctly                                                           | Pass |
+| Add publishers page                           | Works Correctly                                                           | Pass |
+| Review page                                   | Works Correctly                                                           | Pass |
+| Edit review page                              | Works Correctly                                                           | Pass |
+| Add Review page                               | Works Correctly                                                           | Pass |
+| Login, register and profile page              | Works Correctly                                                           | Pass |
+| Flash messages resize                         | Works Correctly                                                           | Pass |
+| Flash buttons resize                          | Button alignments slightly off                                            | Fail |
+
 
 # BUGS
 The orginal design for the Games reveiws has changed a lot due to bugs and learning curves i faced during the development of this project. 

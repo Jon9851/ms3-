@@ -188,7 +188,7 @@ the login and register page are very Similar the only differences are the text o
 [Contents](<#contents>)
 
 # Testing
- Please refer to [**_here_**](TESTING.md) for more information on testing 'Quiz Of The World'.
+ Please refer to [**Testing **](testing.md) for more information on testing 'Quiz Of The World'.
   
   # Clone  Repository
    To Clone a repository use the following steps to guide you throught it.
