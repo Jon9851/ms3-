@@ -7,16 +7,15 @@ from gamesreviewc.models import Publisher, Game, Reviews
 from flask_pymongo import PyMongo
 import os
 
-if os.path.exists('env.py'):
+if os.path.exists("env.py"):
     import env
 
 mongoapp = Flask(__name__)
 
-mongoapp.config["MONGO_DBNAME"] = os.getenv('MONGO_DBNAME')
-mongoapp.config["MONGO_URI"] = os.getenv('MONGO_URI')
+mongoapp.config["MONGO_DBNAME"] = os.getenv("MONGO_DBNAME")
+mongoapp.config["MONGO_URI"] = os.getenv("MONGO_URI")
 
 # Redefining from line 3 during testing
-
 
 
 @app.route("/")
@@ -57,7 +56,8 @@ def login():
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
-    username = mongo.db.users.find_one({"username": session["user"]})["username"]
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
 
     if session["user"]:
         return render_template("profile.html", username=username)
@@ -121,7 +121,8 @@ def publisher():
 @app.route("/add_publisher", methods=["GET", "POST"])
 def add_publisher():
     if request.method == "POST":
-        publisher = Publisher(publisher_name=request.form.get("publisher_name"))
+        publisher = Publisher(
+            publisher_name=request.form.get("publisher_name"))
         db.session.add(publisher)
         db.session.commit()
         return redirect(url_for("publisher"))
@@ -145,7 +146,7 @@ def delete_publisher(publisher_id):
     if "user" not in session or session["user"] != "admin":
         flash("You must be admin to delete publishers!")
         return redirect(url_for("publisher"))
-    
+
     publisher = Publisher.query.get_or_404(publisher_id)
     db.session.delete(publisher)
     db.session.commit()

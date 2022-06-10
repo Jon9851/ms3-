@@ -33,20 +33,10 @@ Game review <a href="https://gamesreviewc.herokuapp.com//" target="_blank" rel="
    * [**Features**](<#features>)
        * [Home](<#Home>)
        * [Game](<#Game>)
-       * [Score](<#Score>)
        * [Publishers](<#Publishers>)
-       * [Add-Publishers](<#Add Publishers>)
-       * [Edit-Publishers](<#Edit Publishers>)
        * [Titles](<#Tiles>)
-       * [Add-Games](<#Add Games>)
-       * [Edit-Games](<#Edit Games>)
        * [Reviews](<#Reviews>)
-       * [Add-Reviews](<#Add Reviews>)
-       * [Edit-Reviews](<#Edit-Reviews>)
        * [Profile](<#Profile>)
-       * [Logout](<#Logout>)
-       * [Register](<#Register>)
-       * [Login](<#Login>)
 * [**Future Features**](<#future-features>)
 * [**Technologies Used**](<#Technologies-Used>)
 * [**Testing**](<#testing>)
@@ -103,43 +93,57 @@ The design for the page comes from materialize cards which i edited the backgrou
 During the final stages of devlepoment I choose to lock out users from deleting publishers as this ties all the relational database together. I wnated to give the uses so feed back and warining messages so i choose to implement flash messages.
  
 
-![Hex Color](assets/images/hex1.PNG)
- THe colors that where choosen for the history quiz are displayed in image above.
+![Hex Colours ](gamesreviewc/static/image/hex3.PNG)
+ 
+ 
+ THe colors that where choosen  are displayed in image above.
 
- Red Copper with a hex code of #9e2c0b was used for text, backgorund and hoover effects.(Red- Copper colour)
+ Green darken 2 #388e3c was used for the nav bar footer and other elements with in the site
 
- White smoke with a hex code of #f6f6f6 was used text, backgorund and hoover effects.(White Smoke)
+ Green darken 4 #1b5e20 was used for the text on the games page so the text would stand out. 
+ 
+ White was used for a few various things backgrounds and text and flash messages.
+
+ The buttons colours are red black and yellow.
 
   
 
 [Contents](<#contents>)
 
 # Features
-### Home
-The quiz of the world is a simple quiz game that contains 3 buttons on the home page. Each button will take user to three different pages. The buttons will be highlighted once the user clicked on them, this so that the user and keep track of which page they are on.
+### Home 
+The home page features a nav bar which has lock function depending on whether you are logged or out. Below the nav bar you have a text slider with quotes from different video 
+games, and below that you have and image slider with four different games images combined in to a single changing image, and a footer which covers all 13 pages. The image slider positioning is a small bug as it appears differntly on different devices.
+![Home](gamesreviewc/static/image/homegr.PNG)
 
-![Home](assets/images/home1.PNG)
+### Games
+The game page features cards from materialize with different games images and a brief description of them.
+![Game](gamesreviewc/static/image/gamegr.PNG)
 
-### Instructions
-The instructions page contains a summary of the games rules as well as button to return home.
-![Instructions](assets/images/ins.PNG)
+### Publishers
+The publishers page is the key part of the database as you cant add anything in till you first add a publisher. The publishers page features a fully functioning Crud system with edit and delete
+buttons but only admin can delete publishers.The publishers page also provides links to the add and edits pages so you user can edit if they change there minds.
 
-### Game
-The game contains multiple different features which are designed to help the user while playing the quiz of the world.
+![Publishers](gamesreviewc/static/image/pubgr.PNG)
 
-1.	Located on the top left is a question counter to help the user keep track of what question they are up too.
-2.	Below the question counter is a progress bar which fills up as the user progress through the quiz.
-3.	Located on the top right is a score counter which will help the user keep track of the scores. 
-4.	THe questions are displayed below the progress bar and change at random once a question has been answered.
-5.	The quiz it is self is a multiple-choice quiz with four possible answers with 17 questions in total.
-6.	Each option will change colour once selected. 
 
-![Game](assets/images/test1.png)
+### Titles
+The titles pages is where you can add games to the site, the titles page features collapsibles with the publisher names on the drop and in the drop down there is review, edit and delete buttons to give the user full access. The buttons provides links to the review page and edit games page. Users can delete games as they wish with a flash message appearing to warn them about deleting the games.
 
-### Score
-The score page has a line of text and a name box as well as two buttons which will either restart the quiz or take the user back to the home page. 
+![Titles](gamesreviewc/static/image/titlesgr.PNG)
 
-![Game](assets/images/score1.PNG)
+
+### Reviews
+The Review pages is where you can add reveiws to the site, the reviews page features collapsibles with the game names on the drop and in the drop down there is edit and delete buttons to give the user full access. The buttons provides links to the review page and edit games page. Users can delete reviews as they wish with a flash message appearing to warn them about deleting the reviews. (bug game name wont appear i left out the jinja syntax for this reason)
+
+![Reviews](gamesreviewc/static/image/reveiwgr.PNG)
+
+### Profile
+The profile pages displays the use login details once they have registered on the site with a flash message.
+the login and register page are very Similar the only differences are the text on the pages. The login and register pages are very simple in there design. 
+
+![Profile](gamesreviewc/static/image/pro.PNG)
+
 
 [Contents](<#contents>)
 
@@ -147,18 +151,25 @@ The score page has a line of text and a name box as well as two buttons which wi
 
   ### **Deployment**
 
-  The site was deployed using GitHub. THe following step will depoly You matter site.
-  1. on the github repository, naviagte to **Settings** tab.
-  2. Once on setting page, naviagte to **Pages** on the left hand side of the screen second from the bottom.
-  3. Under **Source**, select the branch to **main**, then click **save**.
-  4.  once you have selected the main branch, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
- 
- ![GitHub pages for deployment](assets/images/github.jpg)
+ This project was deployed to heroku and the steps to do this are below:
+
+1. sign up and log into heroku
+2. In the top right hand corner of the heroku website click new, then create new app
+3. Name app and select region
+4. click create app
+5. Install postgres under the resources tab
+6. Insert relevant config vars into heroku, such as IP,PORT,SECRET_KEY, DATABAS_URL
+7. You can click connect to github but this project used the CLI method.
+8. Log into heroku via CLI
+9. Create a git remote for heroku
+10. Push all changes to the staging area
+11. Push to heroku for your app to run and function.
  
  # Technologies Used
    
 * [HTML5](https://html.spec.whatwg.org/) -Used to create the contents and structure for the website.
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html) -Used to create the styling.
+* [Python3](https://en.wikipedia.org/wiki/Python_(programming_language)) Used to create the routes
 * [Balsamiq](https://balsamiq.com/wireframes/) - Used to create the wireframes.
 * [Gitpod](https://www.gitpod.io/#get-started) - Used to deploy the website.
 * [Github](https://github.com/) - Used to host and edit the website code.
@@ -166,6 +177,13 @@ The score page has a line of text and a name box as well as two buttons which wi
 * [W3 Schools](https://validator.w3.org/)- To test the html and css code.
 * [JavaScript (ES6)](https://open-vsx.gitpod.io/vscode/item?itemName=xabikos.JavaScriptSnippets)
 * [ami responsive design](http://ami.responsivedesign.is) - To test out responsiness all devices
+* [heroku](https://www.heroku.com) - Used for deployment
+* [mongodb](https://www.mongodb.com) - Used for the user db 
+* [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL) User for the publisher games and reveiws db 
+* [PEP8 Online Checker](http://pep8online.com/) Use to check python routes
+* [Materialize](https://materializecss.com/) Used to create html templates
+
+
 
 [Contents](<#contents>)
 

@@ -234,7 +234,7 @@ body {
 }
 /*game modal button postioning */
 .modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-small, .modal .modal-footer .btn-flat {
-  margin-right: 40%;
+  margin-right: 35%;
 }
 /* h4 and p elements */
 .modal h4 {
