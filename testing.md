@@ -129,7 +129,7 @@ The orginal design for the Games reveiws has changed a lot due to bugs and learn
   3. flash delete buttonns slightly off centered.  
 
 # Accessibilty
-Accessibilty was tested on lighthouse during the development of  game review The results are distheplayed below. There are some discrepancies on the light house depending on what 
+Accessibilty was tested on lighthouse during the development of  game review The results are displayed below. There are some discrepancies on the light house depending on what 
 page you are on the site. I have attempted  to fix this but all i did was break the site. I have tired to sort some of these issues out but due to me reaching my build limit im unable to fix the rest of the issues.
 
 ![Testing on Lighthouse Reports ](gamesreviewc/static/image/lightrp.PNG)
