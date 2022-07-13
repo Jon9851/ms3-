@@ -113,7 +113,7 @@ During the final stages of devlepoment I choose to lock out users from deleting 
 # Features
 ### Home 
 The home page features a nav bar which has lock function depending on whether you are logged or out. Below the nav bar you have a text slider with quotes from different video 
-games, and below that you have and image slider with four different games images combined in to a single changing image, and a footer which covers all 13 pages. The image slider positioning is a small bug as it appears differntly on different devices.
+games, and below that you have and image slider with four different games images combined in to a single changing image, and a footer which covers all 13 pages. The image slider positioning is a small bug as it appears differnetly on different devices.
 ![Home](gamesreviewc/static/image/homegr.PNG)
 
 ### Games

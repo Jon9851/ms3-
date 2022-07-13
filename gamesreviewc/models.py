@@ -19,8 +19,10 @@ class Game(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     game_name = db.Column(db.String(30), unique=True, nullable=True)
     publisher_id = db.Column(
-        db.Integer, db.ForeignKey("publisher.id", ondelete="CASCADE"), nullable=False
+        db.Integer, db.ForeignKey
+        ("publisher.id", ondelete="CASCADE"), nullable=False
     )
+
 
 class Reviews(db.Model):
     # schema for  games model
@@ -29,11 +31,10 @@ class Reviews(db.Model):
     game_rating = db.Column(db.String(30), unique=False, nullable=True)
     game_genre = db.Column(db.String(30), unique=False, nullable=True)
     game_id = db.Column(
-        db.Integer, db.ForeignKey("game.id", ondelete="CASCADE"), nullable=False)
-    
-    
+        db.Integer, db.ForeignKey
+        ("game.id", ondelete="CASCADE"), nullable=False
+    )
+
     def __repr__(self):
         # __repr__ to represent itself in the form of a string]
-        return "#{0} - Game Review: {1}".format(
-            self.id, self.game_review
-        )
+        return "#{0} - Game Review: {1}".format(self.id, self.game_review)

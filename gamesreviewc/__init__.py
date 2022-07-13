@@ -19,6 +19,4 @@ app.config["SQLALCHEMY_DATABASE_URI"] = uri  # herok
 db = SQLAlchemy(app)
 mongo = PyMongo(app)
 
-
-from gamesreviewc import routes #noqa
- 
+from gamesreviewc import routes  # noqa
