@@ -1,55 +1,55 @@
 * [**Testing**](<#testing>)
 * [**Manual Testing**](<#manual-testing>)
 * [**Bugs**](<#bugs>)
-* [**Accessibilty**](<#accessibilty>)
+* [**Accessibility**](<#accessibilty>)
 # Testing
-W3C markup validator and W3C CSS validator were used to test and vailidate all the code on all 4  pages of history quiz to ensure that there were no syntax errors. JS hint was used to test the Javascrpit and PEP8 online checker for python errors.
+W3C markup validator and W3C CSS validator were used to test and validate all the code on all 4  pages of history quiz to ensure that there were no syntax errors. JS hint was used to test the Javascrpit and PEP8 online checker for python errors.
 
 
  # index
- The image below is testing for the index.html file. No errors or warnings are visable. 
+ The image below is testing for the index.html file. No errors or warnings are visible. 
 
 ![Testing on W3C Html](gamesreviewc/static/image/Screenshot.png)
 
 ![Testing on W3C CSS](gamesreviewc/static/image/cssv.PNG)
 
  # Games
- The image below is testing for the instructions.html file. No errors or warnings are visable. 
+ The image below is testing for the instructions.html file. No errors or warnings are visible. 
 
 ![Testing on W3C Html](gamesreviewc/static/image/Screenshot.png)
 
 ![Testing on W3C CSS](gamesreviewc/static/image/cssv.PNG)
 
  # Publishers
- The image below is testing for the game.html file. No errors or warnings are visable. 
+ The image below is testing for the game.html file. No errors or warnings are visible. 
 
 ![Testing on W3C Html](gamesreviewc/static/image/Screenshot.png)
 
 ![Testing on W3C CSS](gamesreviewc/static/image/cssv.PNG)
 
  # Titles
- The image below is testing for the Score.html file. No errors or warnings are visable. 
+ The image below is testing for the Score.html file. No errors or warnings are visible. 
 
 ![Testing on W3C Html](gamesreviewc/static/image/Screenshot.png)
 
 ![Testing on W3C CSS](gamesreviewc/static/image/cssv.PNG))
 
 # Reviews
- The image below is testing for the Score.html file. No errors or warnings are visable. 
+ The image below is testing for the Score.html file. No errors or warnings are visible. 
 
 ![Testing on W3C Html](gamesreviewc/static/image/Screenshot.png)
 
 ![Testing on W3C CSS](gamesreviewc/static/image/cssv.PNG)
 
 # Profiles
- The image below is testing for the Score.html file. No errors or warnings are visable. 
+ The image below is testing for the Score.html file. No errors or warnings are visible. 
 
 ![Testing on W3C Html](gamesreviewc/static/image/Screenshot.png)
 
 ![Testing on W3C CSS](gamesreviewc/static/image/cssv.PNG)
 
 # Errors 
-During the testing of the sides code i came several warning error when running my code throught w3 validator or javascript warning error. These error cant be removed as these are due to block contents being carried over from the html page or from Materialize. I have tired taking these error out but it breaks the code. For example the duplicate error on the html validation for the sidenav-bar. I have removed the duplicate attribute and the side navbar stopped workingso i had to put the line of code back in.
+During the testing of the sides code i came several warning error when running my code through w3 validator or javascript warning error. These error cant be removed as these are due to block contents being carried over from the html page or from Materialize. I have tired taking these error out but it breaks the code. For example the duplicate error on the html validation for the sidenav-bar. I have removed the duplicate attribute and the side navbar stopped working so i had to put the line of code back in.
 
 ![Warning Errors ](gamesreviewc/static/image/warnings.PNG)
 
@@ -122,14 +122,14 @@ Some issues due using materlize
 
 
 # BUGS
-The orginal design for the Games reveiws has changed a lot due to bugs and learning curves i faced during the development of this project. 
+The original  design for the Games reviews has changed a lot due to bugs and learning curves i faced during the development of this project. 
 
-  1. Image silder positioning on different devices, cant work out how to keep it centered.
-  2. Game name on the reveiw page wont appear jinja syntax taken out 
-  3. flash delete buttonns slightly off centered.  
+  1. Image slider positioning on different devices, cant work out how to keep it centered.
+  2. Game name on the review page wont appear jinja syntax taken out 
+  3. flash delete buttons slightly off centered.  
 
-# Accessibilty
-Accessibilty was tested on lighthouse during the development of  game review The results are displayed below. There are some discrepancies on the light house depending on what 
+# Accessibility
+Accessibility was tested on lighthouse during the development of  game review The results are displayed below. There are some discrepancies on the light house depending on what 
 page you are on the site. I have attempted  to fix this but all i did was break the site. I have tired to sort some of these issues out but due to me reaching my build limit im unable to fix the rest of the issues.
 
 ![Testing on Lighthouse Reports ](gamesreviewc/static/image/lightrp.PNG)
