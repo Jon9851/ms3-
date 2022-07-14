@@ -95,7 +95,7 @@ The design for the page comes from materialize cards which i edited the backgrou
 During the final stages of development I choose to lock out users from deleting publishers as this ties all the relational database together. I wanted to give the uses so feed back and warning messages so i choose to implement flash messages.
  
 
-![Hex Colours ](gamesreviewc/static/image/hex3.PNG)
+![Hex Colors ](gamesreviewc/static/image/hex3.PNG)
  
  
  THe colors that where chosen  are displayed in image above.
@@ -106,7 +106,7 @@ During the final stages of development I choose to lock out users from deleting 
  
  White was used for a few various things backgrounds and text and flash messages.
 
- The buttons colours are red black and yellow.
+ The buttons colors are red black and yellow.
 
   
 
