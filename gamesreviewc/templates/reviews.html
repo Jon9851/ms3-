@@ -19,8 +19,8 @@
 </div>
 <ul class="collapsible">
   {% for game in game %}
-   {% for review in reviews %}
-    <li>
+  {% for review in reviews %}
+  <li>
     <div class="collapsible-header green white-text">
       <i class="fa-solid fa-gamepad-modern"></i>
       <strong>{{ game.game_name }}</strong>
@@ -44,8 +44,8 @@
         </div>
       </div>
     </div>
-    </li>
-    {% endfor %}
+    </li>    
+  {% endfor %}
   {% endfor %}
 </ul>
 {% endblock %}
