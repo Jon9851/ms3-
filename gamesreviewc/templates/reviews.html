@@ -20,11 +20,11 @@
 <!--this is so that the game name appears in the collapsible drop down menu-->
 {% if game|length > 0 %}
 <ul class="collapsible">
-  {% for g in game %}
+  {% for game in game %}
    {% for review in reviews %}
    <li>
       <div class="collapsible-header green darken-2 white-text">
-         <strong>{{ g.game_name }}</strong> 
+         <strong>{{ game.game_name }}</strong> 
       </div>
       <div class="collapsible-body white green-text darken-2">
          <p>{{ review.game_review }}</p>
