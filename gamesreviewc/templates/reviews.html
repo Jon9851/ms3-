@@ -17,12 +17,14 @@
     </a>
   </div>
 </div>
+{% if game|length > 0 %}
 <ul class="collapsible">
+  {% for game in game %}
   {% for review in reviews %}
   <li>
     <div class="collapsible-header green white-text">
       <i class="fa-solid fa-gamepad-modern"></i>
-      <strong></strong>
+      <strong>{{ game.game_name }}</strong>
     </div>
     <div class="collapsible-body white green-text">
       <p>{{ review.game_review }}</p>
@@ -34,7 +36,7 @@
         <!-- Modal -->
         <div id="modal-{{ reviews.id }}" class="modal m4">
           <div class="modal-content col m3 green darken-2 white-text">
-            <h4>Are you sure you want to delete this Publisher?</h4>
+            <h4>Are you sure you want to delete this Review?</h4>
             <p>This action cannot be undone</p>
           </div>
           <div class="modal-footer green darken-2">
