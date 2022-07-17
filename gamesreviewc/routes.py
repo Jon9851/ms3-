@@ -99,6 +99,16 @@ def register():
 
     return render_template("register.html")
 
+def login_required(f):
+    # ensures page is only viewable to logged in users
+    # https://flask.palletsprojects.com/ helped me achieve this
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if "user" not in session:
+            flash("You need to be logged in to view this page")
+            return redirect(url_for('home'))
+        return f(*args, **kwargs)
+    return decorated_function
 
 @app.route("/games")
 def games():
@@ -106,6 +116,7 @@ def games():
 
 
 @app.route("/titles")
+@login_required
 def titles():
     game = list(Game.query.order_by(Game.id).all())
     publisher = list(Publisher.query.order_by(Publisher.id).all())
@@ -113,12 +124,14 @@ def titles():
 
 
 @app.route("/publisher")
+@login_required
 def publisher():
     publisher = list(Publisher.query.order_by(Publisher.publisher_name).all())
     return render_template("publisher.html", publisher=publisher)
 
 
 @app.route("/add_publisher", methods=["GET", "POST"])
+@login_required
 def add_publisher():
     if request.method == "POST":
         publisher = Publisher(
@@ -130,6 +143,7 @@ def add_publisher():
 
 
 @app.route("/edit_publisher/<int:publisher_id>", methods=["GET", "POST"])
+@login_required
 def edit_publisher(publisher_id):
 
     publisher = Publisher.query.get_or_404(publisher_id)
@@ -141,6 +155,7 @@ def edit_publisher(publisher_id):
 
 
 @app.route("/delete_publisher/<int:publisher_id>")
+@login_required
 def delete_publisher(publisher_id):
 
     if "user" not in session or session["user"] != "admin":
@@ -154,6 +169,7 @@ def delete_publisher(publisher_id):
 
 
 @app.route("/add_game", methods=["GET", "POST"])
+@login_required
 def add_game():
     publisher = list(Publisher.query.order_by(Publisher.publisher_name).all())
     if request.method == "POST":
@@ -168,6 +184,7 @@ def add_game():
 
 
 @app.route("/edit_game/<int:game_id>", methods=["GET", "POST"])
+@login_required
 def edit_game(game_id):
     game = Game.query.get_or_404(game_id)
     if request.method == "POST":
@@ -179,6 +196,7 @@ def edit_game(game_id):
 
 
 @app.route("/delete_game/<int:game_id>")
+@login_required
 def delete_game(game_id):
     game = Game.query.get_or_404(game_id)
     db.session.delete(game)
@@ -187,6 +205,7 @@ def delete_game(game_id):
 
 
 @app.route("/reviews")
+@login_required
 def reviews():
     reviews = list(Reviews.query.order_by(Reviews.id).all())
     print("reviews:", reviews)
@@ -194,6 +213,7 @@ def reviews():
 
 
 @app.route("/add_reviews", methods=["GET", "POST"])
+@login_required
 def add_reviews():
     game = list(Game.query.order_by(Game.game_name).all())
     if request.method == "POST":
@@ -210,6 +230,7 @@ def add_reviews():
 
 
 @app.route("/edit_reviews/<int:reviews_id>", methods=["GET", "POST"])
+@login_required
 def edit_reviews(reviews_id):
     reviews = Reviews.query.get_or_404(reviews_id)
     game = list(Game.query.order_by(Game.game_name).all())
@@ -224,14 +245,9 @@ def edit_reviews(reviews_id):
 
 
 @app.route("/delete_reviews/<int:reviews_id>")
+@login_required
 def delete_reviews(reviews_id):
     reviews = Reviews.query.get_or_404(reviews_id)
     db.session.delete(reviews)
     db.session.commit()
     return redirect(url_for("reviews"))
-
-@app.errorhandler(500)
-def internal_server_error(e):
-    # note that we set the 500 status explicitly
-    # https://flask.palletsprojects.com/ helped me achieve this
-    return render_template('error.html'), 500
