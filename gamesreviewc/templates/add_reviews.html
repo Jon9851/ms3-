@@ -22,7 +22,7 @@
   <form method="post" action="{{ url_for('add_reviews') }}">
     <div class="input-field col s12 white-text"></div>
     {%  for review in Reviews %}
-    <option value="{{ review.game_reivew}}">{{ reviews.game_reivew}}</option>
+    <option value="{{ review.game_review}}">{{ reviews.game_review}}</option>
     {% endfor %}
     <li class="collection-item avatar green darken-2">
         <span class="title">Review</span>
