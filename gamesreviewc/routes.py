@@ -1,4 +1,5 @@
 from flask import flash, render_template, request, session, redirect, url_for
+from functools import wraps
 from bson.objectid import ObjectId
 from gamesreviewc import app, db, mongo
 from werkzeug.security import generate_password_hash, check_password_hash
