@@ -156,9 +156,9 @@ Werkzeug is python library which contains lot of development and debugging tools
 
 #### Data Schema 
 
-The image below details my data schema on how all my relationships within my database.
+The image below details my database schema on how all my relationships within my database are connected and. 
 
-![Data-Schema](gamesreviewc/static/image/schema1.png)
+![Data-Schema](gamesreviewc/static/image/scheme.png)
 
 
 [Contents](<#contents>)
@@ -215,7 +215,8 @@ The image below details my data schema on how all my relationships within my dat
    5. Type git clone, and then paste the URL copied from GitHub.
    6. Press enter and the local clone will be created.
 
-   ![clone Image ](assets/images/clone.png)
+   ![clone Image ](gamesreviewc/static/image/clone.png)
+
 
 
 

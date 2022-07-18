@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-
 <h3 class="hide"> Reviews </h3>
 <div class="row">
   <div class="s1 m2">
@@ -21,9 +20,9 @@
 <div class="row">
   <div>
     {% for p in publisher  %}
-    <di class="col s12 m5 l3 transparent">
+    <di class="col s12 m4 l3 transparent">
       <div class="card green darken-2 center-align">
-        <div class="card-image s12 m6 13 center-align">
+        <div class="card-image s12 m5 13 center-align">
           <img src="{{url_for('static', filename='image/games.png')}}" alt="game" aria-label="game picture">
           <span class="card-title s12 m5 13">{{ p.publisher_name }}</span>
         </div>

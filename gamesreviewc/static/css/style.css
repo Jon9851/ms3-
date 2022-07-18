@@ -170,7 +170,7 @@ q {
   opacity: 0.8;
 }
 
-/* image slider resonpsiveness */
+/* image slider resonpiveness */
 @media (max-width: 920px) {
   .img-slider .slide img {
     width: 80%;
@@ -184,8 +184,7 @@ q {
 }
 
 /* card image sizes */
-.height,
-.card-image {
+.height .card-image {
   height: 30vh;
 }
 /* row text size */
