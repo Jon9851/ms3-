@@ -2,22 +2,27 @@
 
 WELCOME TO GAMES REVIEW
 
-Being a gamer my self I wanted to create a website database where user’s have control on the content that can be added to the database. Having played a lot of games I wanted to create something where people can add their honest opinions about games. The website uses a number of different languages and is a combination of POSTGRESSQL and MONGODB.
+The video games industry has become massive over the years and has created my different jobs, whether you’re in the gaming industry as developer or a journalist or a content creator on You Tube. I wanted to create a site that is honest and reflects your opinion about the games you. I have played many games over the year where the reviews for video games have been 9 out 10 or 10 out 10 so I decided to buy the game and became disappointed as the reviews for the game didn’t match up to my experience. Many companies today have the power to block access to games if you dislike or say something bad about their product. This was my inspiration to create games review  a honest review site where you can say what you want about the games you pay for. 
 
-So what language and technology’s  did I use for the creation of the database.
+The website uses a number of different languages and is a combination of POSTGRESSQL and MONGODB.
+
+So what are the language and technology’s  did I use for the creation of the database.
 
 PostgreSQL and Mongo dB were used to create the database it is self, with python language used to create the routes for the database. I defiantly found tricky combining both database and the overall creation of the database.
 
 PostgreSQL part of the database includes the publishers titles and review sections of the database.  The Mongo dB side of the database handles the user’s login and registration which I have included a Werkzeug password hash to help protect users and included defensive programming for users as well. I originally wanted to have the user’s models created inside the PostgreSQL database, but I found creating the routes to difficult as there was no learning materials provided for this, so I decided to user mongo dB instead.
 
+Python 3 was used to create the models and routes for the site. 
+
 Html, CSS and JavaScript were used to create the front end of the website. For the design of the front end, I used Materialize templates which includes custom CSS and responsiveness for all devices included in the package. All images I have used in the website are all for educational purposes only.
+
 
 My overall goal for this project was to keep the html JavaScript and CSS simple as I wanted to ensure that I added full CRUD functionality to all pages of the database with flash messages and a fully functioning register and login system with a logout capability. 
 
 This project certainly tested me during it is development.
 
 
-Game review <a href="https://gamesreviewc.herokuapp.com//" target="_blank" rel="noopner">Game Review</a>
+Games review <a href="https://gamesreviewc.herokuapp.com//" target="_blank" rel="noopner">Game Review</a>
 
 
 
@@ -38,6 +43,7 @@ Game review <a href="https://gamesreviewc.herokuapp.com//" target="_blank" rel="
        * [Reviews](<#Reviews>)
        * [Profile](<#Profile>)
        * [Werkzeug](<#Werkzeug>)
+       * [Defensive](<#Defensive>)
        * [Data Schema](<#Data-Schema>)
 * [**Future Features**](<#future-features>)
 * [**Technologies Used**](<#Technologies-Used>)
@@ -147,11 +153,16 @@ the login and register page are very Similar the only differences are the text o
 ![Profile](gamesreviewc/static/image/pro.png)
 
 #### Werkzeug
-Werkzeug is python library which contains lot of development and debugging tools for implementation of web application gateway interface(WSGI) applications. The good part is you can use this system not only for your web applications but also for standalone python applications like desktop apps, scripts, mobile apps and so on.
+
 1. Passwords will not be stored as plaintext in database.
 2. Password will be stored as hash which is irreversible to plaintext.
 3. Each user password will be hashed with salt to mitigate rainbow table attacks; Just in case if database got compromised.
 
+### Function Tools 
+
+I have added additional security to my site by adding functions tools wraps to it so that you can not bypass each page by just copying and pasting in the URL from each page in to the search bar.
+
+![Defensive](gamesreviewc/static/image/defensive.png)
 
 
 #### Data Schema 
@@ -192,7 +203,7 @@ The image below details my database schema on how all my relationships within my
 * [Code Beautify](https://codebeautify.org/jsvalidate) - To test and run the code
 * [W3 Schools](https://validator.w3.org/)- To test the html and css code.
 * [JavaScript (ES6)](https://open-vsx.gitpod.io/vscode/item?itemName=xabikos.JavaScriptSnippets)
-* [ami responsive design](http://ami.responsivedesign.is) - To test out responsivness all devices
+* [ami responsive design](http://ami.responsivedesign.is) - To test out responsiveness on all devices
 * [heroku](https://www.heroku.com) - Used for deployment
 * [mongodb](https://www.mongodb.com) - Used for the user db 
 * [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL) User for the publisher games and reviews db 
