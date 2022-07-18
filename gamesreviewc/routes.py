@@ -210,7 +210,8 @@ def delete_game(game_id):
 def reviews():
     reviews = list(Reviews.query.order_by(Reviews.id).all())
     print("reviews:", reviews)
-    return render_template("reviews.html", reviews=reviews)
+    game = list(Game.query.order_by(Game.id).all())
+    return render_template("reviews.html", reviews=reviews, game=game)
 
 
 @app.route("/add_reviews", methods=["GET", "POST"])
