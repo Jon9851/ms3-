@@ -21,7 +21,7 @@ Game review <a href="https://gamesreviewc.herokuapp.com//" target="_blank" rel="
 
 
 
-![Games Review responsiveness ](gamesreviewc/static/image/responisvems3.PNG)
+![Games Review responsiveness ](gamesreviewc/static/image/responisvems3.png)
 
 # Contents
 
@@ -78,9 +78,9 @@ includes integrated  responsiveness package.
 
  
 
-![Wireframe Desktop](gamesreviewc/static/image/frames10.PNG)
-![Wireframe Desktop](gamesreviewc/static/image/frames20.PNG)
-![Wireframe Desktop](gamesreviewc/static/image/frames30.PNG)
+![Wireframe Desktop](gamesreviewc/static/image/frameshome.png)
+![Wireframe Desktop](gamesreviewc/static/image/frames2.png)
+![Wireframe Desktop](gamesreviewc/static/image/frames3.png
 
 [Contents](<#contents>)
 
@@ -95,7 +95,7 @@ The design for the page comes from materialize cards which i edited the backgrou
 During the final stages of development I choose to lock out users from deleting publishers as this ties all the relational database together. I wanted to give the uses so feed back and warning messages so i choose to implement flash messages.
  
 
-![Hex Colors ](gamesreviewc/static/image/hex3.PNG)
+![Hex Colors ](gamesreviewc/static/image/hex3.png)
  
  
  THe colors that where chosen  are displayed in image above.
@@ -116,35 +116,35 @@ During the final stages of development I choose to lock out users from deleting 
 ### Home 
 The home page features a nav bar which has lock function depending on whether you are logged or out. Below the nav bar you have a text slider with quotes from different video 
 games, and below that you have and image slider with four different games images combined in to a single changing image, and a footer which covers all 13 pages. The image slider positioning is a small bug as it appears differently on different devices.
-![Home](gamesreviewc/static/image/homegr.PNG)
+![Home](gamesreviewc/static/image/homegr.png)
 
 ### Games
 The game page features cards from materialize with different games images and a brief description of them.
-![Game](gamesreviewc/static/image/gamegr.PNG)
+![Game](gamesreviewc/static/image/gamegr.png)
 
 ### Publishers
 The publishers page is the key part of the database as you cant add anything in till you first add a publisher. The publishers page features a fully functioning Crud system with edit and delete
 buttons but only admin can delete publishers.The publishers page also provides links to the add and edits pages so you user can edit if they change there minds.
 
-![Publishers](gamesreviewc/static/image/pubgr.PNG)
+![Publishers](gamesreviewc/static/image/pubgr.png)
 
 
 ### Titles
 The titles pages is where you can add games to the site, the titles page features collapsible with the publisher names on the drop and in the drop down there is review, edit and delete buttons to give the user full access. The buttons provides links to the review page and edit games page. Users can delete games as they wish with a flash message appearing to warn them about deleting the games.
 
-![Titles](gamesreviewc/static/image/titlesgr.PNG)
+![Titles](gamesreviewc/static/image/titlesgr.png)
 
 
 ### Reviews
 The Review pages is where you can add reviews to the site, the reviews page features collapsibles with the game names on the drop and in the drop down there is edit and delete buttons to give the user full access. The buttons provides links to the review page and edit games page. Users can delete reviews as they wish with a flash message appearing to warn them about deleting the reviews. (bug game name wont appear i left out the jinja syntax for this reason)
 
-![Reviews](gamesreviewc/static/image/reveiwgr.PNG)
+![Reviews](gamesreviewc/static/image/reveiwgr.png)
 
 ### Profile
 The profile pages displays the use login details once they have registered on the site with a flash message.
 the login and register page are very Similar the only differences are the text on the pages. The login and register pages are very simple in there design. 
 
-![Profile](gamesreviewc/static/image/pro.PNG)
+![Profile](gamesreviewc/static/image/pro.png)
 
 #### Werkzeug
 Werkzeug is python library which contains lot of development and debugging tools for implementation of web application gateway interface(WSGI) applications. The good part is you can use this system not only for your web applications but also for standalone python applications like desktop apps, scripts, mobile apps and so on.
@@ -174,7 +174,7 @@ The image below details my data schema on how all my relationships within my dat
 3. Name app and select region
 4. click create app
 5. Install postgres under the resources tab
-6. Insert relevant config vars into heroku, such as IP,PORT,SECRET_KEY, DATABAS_URL
+6. Insert relevant config vars into heroku, such as IP,PORT,SECRET_KEY, DATABASE_URL
 7. You can click connect to github but this project used the CLI method.
 8. Log into heroku via CLI
 9. Create a git remote for heroku
