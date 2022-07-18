@@ -17,6 +17,7 @@
     </a>
   </div>
 </div>
+{% if game|length > 0 %}
 <ul class="collapsible">
   {% for game in game %}
    {% for review in reviews %}
