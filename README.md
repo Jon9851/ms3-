@@ -91,7 +91,7 @@ includes integrated  responsiveness package.
 [Contents](<#contents>)
 
 # Design Choices
- When designing the games review database I wanted it to be to be simple to use, as I wanted the CRUD functionality to be present in the databse . Games review contains 13 pages which 11 pages related to Crud functions with in the database. After spending serval hours looking at Materialize i eventually decided on cards, collapsibles and a nav bar with a built in side nav bar for the design. I wanted the overall look of the side to feel simple and easy to use. All pages are linked up with either url`s or with buttons directing you to the different pages on the site.
+ When designing the games review database I wanted it to be to be simple to use, as I wanted the CRUD functionality to be present in the database . Games review contains 13 pages which 11 pages related to Crud functions with in the database. After spending serval hours looking at Materialize i eventually decided on cards, collapsibles and a nav bar with a built in side nav bar for the design. I wanted the overall look of the side to feel simple and easy to use. All pages are linked up with either url`s or with buttons directing you to the different pages on the site.
 
  The nav bar covers all 13 pages of the site which is kept on the base template, across all the pages i have put in a background image which gives the site a nice contrasts from the text on the page. Early on in the design I knew i was going to use green for the overall look of the site, I originally choose blue for the text, but due to it being difficult to see I changed the text color scheme to white which stood out more. 
 
@@ -142,7 +142,8 @@ The titles pages is where you can add games to the site, the titles page feature
 
 
 ### Reviews
-The Review pages is where you can add reviews to the site, the reviews page features collapsibles with the game names on the drop and in the drop down there is edit and delete buttons to give the user full access. The buttons provides links to the review page and edit games page. Users can delete reviews as they wish with a flash message appearing to warn them about deleting the reviews. (bug game name wont appear i left out the jinja syntax for this reason)
+The Review pages is where you can add reviews to the site, the reviews page features collapsibles
+ with the game names on the drop and in the drop down there is edit and delete buttons to give the user full access. The buttons provides links to the review page and edit games page. Users can delete reviews as they wish with a flash message appearing to warn them about deleting the reviews. (bug game name wont appear i left out the jinja syntax for this reason)
 
 ![Reviews](gamesreviewc/static/image/reveiwgr.png)
 
