@@ -260,12 +260,3 @@ p {
 .flashes h5 {
   line-height: 2;
 }
-
-/* card ccs text to appear lower down */
-.card .card-image .card-title {
-  color: #fff;
-  bottom: 0;
-  left: 0;
-  max-width: 100%;
-  padding: 24px;
-}
