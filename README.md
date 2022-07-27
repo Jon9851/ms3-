@@ -170,7 +170,7 @@ I have added additional security to my site by adding functions tools wraps to i
 
 The image below details my database schema on how all my relationships within my database are connected and. 
 
-![Data-Schema](gamesreviewc/static/image/scheme.png)
+![Data-Schema](gamesreviewc/static/image/schemams3.png)
 
 
 [Contents](<#contents>)
