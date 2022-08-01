@@ -24,10 +24,9 @@
       <div class="card green darken-2 center-align">
         <div class="card-image s12 m5 l3 center-align">
           <img src="{{url_for('static', filename='image/games.png')}}" alt="game" aria-label="game picture">
-          <span class="card-title s12 m6 l3">{{ p.publisher_name }}</span>
         </div>
         <div class="card-content white-text">
-          <p>Publishers Name</p>
+          <span class="card-title s12 m6 l3">{{ p.publisher_name }}</span>
         </div>
         <div class="card-action">
           <a href="{{ url_for('edit_publisher', publisher_id=p.id) }}" class="btn black">Edit</a>
