@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!--this card component came from materialize.css-->
+<div class="row">
+   <div class="col s8 m4 offset-m4 offset-s2">
+      <!--Message to the user upon error occurring in application,
+              card from materialize.css-->
+      <div class="card-panel transparent center-align white-text">
+         <p>
+            Sorry! There seems to have been a problem, please click below to return to Games Review
+      </div>
+   </div>
+</div>
+ <div class="row">
+    <div class="col s12 white-text">
+       <p class="center-align">
+          Return to application
+          <a href="{{ url_for('index') }}"
+             class="blue-text text-darken-4">Games Review</a>
+       </p>
+    </div>
+ </div>
+
+{% endblock %}

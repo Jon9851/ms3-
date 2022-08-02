@@ -4,6 +4,7 @@ from bson.objectid import ObjectId
 from gamesreviewc import app, db, mongo
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import session, Flask
+from werkzeug.exceptions import HTTPException
 from gamesreviewc.models import Publisher, Game, Reviews
 from flask_pymongo import PyMongo
 import os
@@ -255,3 +256,36 @@ def delete_reviews(reviews_id):
     db.session.delete(reviews)
     db.session.commit()
     return redirect(url_for("reviews"))
+
+
+"""
+    All error handlers were implemented with help from
+    https://flask.palletsprojects.com/
+"""
+
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    """
+        handles a 400 Bad Request error
+        and returns an error message to the user
+    """
+    return render_template('error.html'), 500
+
+
+@app.errorhandler(400)
+def handle_bad_request(e):
+    """
+        handles a 400 Bad Request error
+        and returns an error message to the user
+    """
+    return render_template("error.html", error_status=e), 400
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    """
+        handles a 404 Not Found error
+        and returns an error message to the user
+    """
+    return render_template("error.html", error_status=e), 404
