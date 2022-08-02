@@ -2,7 +2,7 @@
 
 WELCOME TO GAMES REVIEW
 
-The video games industry has become massive over the years and has created my different jobs, whether you’re in the gaming industry as developer or a journalist or a content creator on You Tube. I wanted to create a site that is honest and reflects your opinion about the games you. I have played many games over the year where the reviews for video games have been 9 out 10 or 10 out 10 so I decided to buy the game and became disappointed as the reviews for the game didn’t match up to my experience. Many companies today have the power to block access to games if you dislike or say something bad about their product. This was my inspiration to create games review  a honest review site where you can say what you want about the games you pay for. 
+The video games industry has become massive over the years and has created my different jobs, whether you’re in the gaming industry as developer or a journalist or a content creator on You Tube. I wanted to create a site that is honest and reflects your opinion about the games you. I have played many games over the year where the reviews for video games have been 9 out 10 or 10 out 10 so I decided to buy the game and became disappointed as the reviews for the game didn’t match up to my own experience. Many companies today have the power to block access to games if you dislike or say something bad about their product. This was my inspiration to create games review  a honest review site where you can say what you want about the games you pay for. 
 
 The website uses a number of different languages and is a combination of POSTGRESSQL and MONGODB.
 
