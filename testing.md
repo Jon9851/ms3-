@@ -23,7 +23,7 @@ W3C markup validator and W3C CSS validator were used to test and validate all th
  # Publishers
  The image below is testing for the game.html file. No errors or warnings are visible. 
 
-![Testing on W3C Html](gamesreviewc/static/image/Screenshot.png)
+![Testing on W3C Html](gamesreviewc/static/image/screenshot.png)
 
 ![Testing on W3C CSS](gamesreviewc/static/image/cssv.png)
 
