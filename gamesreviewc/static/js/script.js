@@ -15,3 +15,4 @@
     M.Modal.init(modal);
 });
 
+//Due to using materialize Javascript frame work code this will throw up errors on JSlint 

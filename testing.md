@@ -9,14 +9,14 @@ W3C markup validator and W3C CSS validator were used to test and validate all th
  # index
  The image below is testing for the index.html file. No errors or warnings are visible. 
 
-![Testing on W3C Html](gamesreviewc/static/image/Screenshot.png)
+![Testing on W3C Html](gamesreviewc/static/image/screenshot.png)
 
 ![Testing on W3C CSS](gamesreviewc/static/image/cssv.png)
 
  # Games
  The image below is testing for the instructions.html file. No errors or warnings are visible. 
 
-![Testing on W3C Html](gamesreviewc/static/image/Screenshot.png)
+![Testing on W3C Html](gamesreviewc/static/image/screenshot.png)
 
 ![Testing on W3C CSS](gamesreviewc/static/image/cssv.png)
 
@@ -30,21 +30,21 @@ W3C markup validator and W3C CSS validator were used to test and validate all th
  # Titles
  The image below is testing for the Score.html file. No errors or warnings are visible. 
 
-![Testing on W3C Html](gamesreviewc/static/image/Screenshot.png)
+![Testing on W3C Html](gamesreviewc/static/image/screenshot.png)
 
 ![Testing on W3C CSS](gamesreviewc/static/image/cssv.png))
 
 # Reviews
  The image below is testing for the Score.html file. No errors or warnings are visible. 
 
-![Testing on W3C Html](gamesreviewc/static/image/Screenshot.png)
+![Testing on W3C Html](gamesreviewc/static/image/screenshot.png)
 
 ![Testing on W3C CSS](gamesreviewc/static/image/cssv.png)
 
 # Profiles
  The image below is testing for the Score.html file. No errors or warnings are visible. 
 
-![Testing on W3C Html](gamesreviewc/static/image/Screenshot.png)
+![Testing on W3C Html](gamesreviewc/static/image/screenshot.png)
 
 ![Testing on W3C CSS](gamesreviewc/static/image/cssv.png)
 

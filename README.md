@@ -151,7 +151,7 @@ The Review pages is where you can add reviews to the site, the reviews page feat
 The profile pages displays the use login details once they have registered on the site with a flash message.
 the login and register page are very Similar the only differences are the text on the pages. The login and register pages are very simple in there design. 
 
-![Profile](gamesreviewc/static/image/pro.png)
+![Profile](gamesreviewc/static/image/profile.png)
 
 #### Werkzeug
 

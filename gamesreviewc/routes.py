@@ -100,6 +100,7 @@ def register():
 
     return render_template("register.html")
 
+
 def login_required(f):
     # ensures page is only viewable to logged in users
     # https://flask.palletsprojects.com/ helped me achieve this
@@ -110,6 +111,7 @@ def login_required(f):
             return redirect(url_for('index'))
         return f(*args, **kwargs)
     return decorated_function
+
 
 @app.route("/games")
 def games():
